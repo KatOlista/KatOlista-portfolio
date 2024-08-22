@@ -3,8 +3,8 @@ import { Button, Navigation } from "../";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
-  const toggleMenuHandler = (e: React.MouseEvent<MouseEvent>) => {
-    console.log(e.target);
+  const toggleMenuHandler = () => {
+    document.querySelector('#menu')?.classList.toggle('menu-active');
   };
 
   return (

@@ -5,7 +5,7 @@ import { menuList } from "../../utils/constants";
 
 export const Menu = () => {
   return (
-    <ul className={styles.menu}>
+    <ul id='menu' className={styles.menu}>
       {menuList.map((menuItem: string) => (
         <li key={menuItem}>
           <a className={styles.menu__link} href="">
