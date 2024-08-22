@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--fontFamilyMain);
+  line-height: 130%;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--textColorMain);
+  background-color: var(--backgroundColorMain);
+}
+
+#root {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  padding-inline: 20px;
+
+  @media (min-width: 768px) {
+    padding-inline: 50px;
+  }
+}

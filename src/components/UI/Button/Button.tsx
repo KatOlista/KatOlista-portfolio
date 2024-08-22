@@ -1,0 +1,35 @@
+import cn from "classnames";
+import styles from "./Button.module.scss";
+
+type Props = {
+  children: string | React.ReactNode;
+  buttonClassName?: string;
+  onClick?: (event: React.MouseEvent<MouseEvent>) => void;
+};
+
+const buttonStyle: React.CSSProperties = {
+  outline: "none",
+  boxShadow: "none",
+  border: "none",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
+  WebkitTapHighlightColor: "transparent",
+};
+
+export const Button: React.FC<Props> = ({
+  children,
+  buttonClassName,
+  onClick,
+}) => {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={buttonStyle}
+      className={cn(buttonClassName, styles.button)}
+    >
+      {children}
+    </button>
+  );
+};
