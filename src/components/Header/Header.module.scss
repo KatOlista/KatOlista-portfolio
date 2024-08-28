@@ -1,13 +1,41 @@
 .header {
+  position: relative;
   font-size: 16px;
   line-height: 125%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__name {
     padding-block: 30px;
+    background: linear-gradient(90deg, var(--textColorMain) 0%, var(--textColorAccent) 50%, var(--backgroundColorMain) 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-text 1.5s linear;
   }
 
-  @media (min-width: 768px) {
+  &__icon {
+    width: 0;
+    stroke: var(--textColorMain);
+    transition:
+      stroke 0.15s ease,
+      transform 0.3s ease;
+  }
+
+  &__icon:active {
+    stroke: var(--backgroundColor-plashka5);
+  }
+
+  &__show {
+    width: 100%;
+    transform: rotate(360deg) scale(0.9);
+  }
+}
+
+@keyframes gradient-text {
+  to {
+    background-position: 200% center;
   }
 }

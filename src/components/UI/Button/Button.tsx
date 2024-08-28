@@ -4,7 +4,9 @@ import styles from "./Button.module.scss";
 type Props = {
   children: string | React.ReactNode;
   buttonClassName?: string;
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null) => void;
+  onClick: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
+  ) => void;
 };
 
 const buttonStyle: React.CSSProperties = {

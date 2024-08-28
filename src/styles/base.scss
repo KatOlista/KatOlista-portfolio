@@ -9,6 +9,7 @@ body {
   font-size: 18px;
   color: var(--textColorMain);
   background-color: var(--backgroundColorMain);
+  overflow-x: hidden;
 }
 
 #root {
@@ -19,7 +20,11 @@ body {
 }
 
 .container {
-  padding-inline: 20px;
+  padding-inline: 5px;
+
+  @media (min-width: 425px) {
+    padding-inline: 20px;
+  }
 
   @media (min-width: 768px) {
     padding-inline: 50px;
@@ -27,5 +32,9 @@ body {
 }
 
 .menu-active {
-  margin-left: 0;
+  left: 0;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }

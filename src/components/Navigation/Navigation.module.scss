@@ -1,7 +1,8 @@
 .navigation {
   display: none;
 
-  &__link {}
+  &__link {
+  }
 
   @media (min-width: 768px) {
     display: block;
