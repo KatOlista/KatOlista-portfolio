@@ -94,25 +94,45 @@
 @keyframes shake {
   0% {
     top: 0;
-    text-shadow: 0 0 var(--textColorMainShadow);
+    text-shadow: 1px 1px var(--textColorMainShadow);
   }
 
-  15% {
+  1% {
     top: 1px;
     text-shadow: -5px 2px var(--textColorMainShadow);
   }
 
+  10% {
+    top: 0px;
+  }
+
+  20% {
+    top: 1px;
+  }
+
   40% {
+    top: 0px;
     text-shadow: 0 0 var(--textColorSecondaryShadow);
   }
 
   50% {
+    top: 1px;
+    left: -1px;
     text-shadow: 4px 2px var(--textColorSecondaryShadow);
+  }
+
+  70% {
+    top: 0px;
+    left: 0px;
+  }
+
+  90% {
+    top: 1px;
   }
 
   100% {
     top: 0;
-    text-shadow: 0px 0 var(--textColorMainShadow);
+    text-shadow: 1px 1px var(--textColorMainShadow);
   }
 }
 

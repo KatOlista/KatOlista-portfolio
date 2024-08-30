@@ -56,7 +56,7 @@ export const Hello = () => {
           . Welcome to my PORTFOLIO!
         </div>
 
-        <a className={styles.hello__scroll} href="/">Scroll for more</a>
+        <a className={styles.hello__scroll} href="#About">Scroll for more</a>
       </div>
     </section>
   );

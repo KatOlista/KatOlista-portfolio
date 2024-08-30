@@ -1,6 +1,3 @@
-import cn from "classnames";
-import styles from "./Button.module.scss";
-
 type Props = {
   children: string | React.ReactNode;
   buttonClassName?: string;
@@ -29,7 +26,7 @@ export const Button: React.FC<Props> = ({
       type="button"
       onClick={onClick}
       style={buttonStyle}
-      className={cn(buttonClassName, styles.button)}
+      className={buttonClassName}
     >
       {children}
     </button>

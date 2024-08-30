@@ -1,6 +1,9 @@
-export { Menu } from "./Menu/Menu";
-export { Hello } from "./Hello/Hello";
+export { Menu } from './Menu/Menu';
+export { Hello } from './Hello/Hello';
 export { About } from './About/About';
-export { Header } from "./Header/Header";
-export { Button } from "./UI/Button/Button";
-export { Navigation } from "./Navigation/Navigation";
+export { Header } from './Header/Header';
+export { Title } from './UI/Title/Title';
+export { Button } from './UI/Button/Button';
+export { Projects } from './Projects/Projects';
+export { Navigation } from './Navigation/Navigation';
+export { ProjectItem } from './ProjectItem/ProjectItem';

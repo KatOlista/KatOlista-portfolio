@@ -1,14 +1,14 @@
 import styles from "./Navigation.module.scss";
 
-import { menuList } from "../../utils/constants";
+import { menuList } from "../../utils";
 
 export const Navigation = () => {
   return (
     <nav className={styles.navigation}>
-      <ul>
+      <ul className={styles.navigation__list}>
         {menuList.map((menuItem: string) => (
-          <li key={menuItem}>
-            <a className={styles.navigation__link} href="">
+          <li className={styles.navigation__li} key={menuItem}>
+            <a className={styles.navigation__link} href={`#${menuItem}`}>
               {menuItem}
             </a>
           </li>

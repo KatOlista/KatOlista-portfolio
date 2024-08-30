@@ -1,10 +1,36 @@
 .navigation {
   display: none;
 
+  &__list {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 125%;
+  }
+
   &__link {
   }
 
   @media (min-width: 768px) {
     display: block;
+  }
+
+  @media (min-width: 990px) {
+    display: block;
+
+    &__li:hover {
+      background: linear-gradient(90deg, var(--textColorMain) 0%, var(--textColorAccent) 50%, var(--backgroundColorMain) 100%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-text 0.5s linear;
+    }
+  }
+}
+
+@keyframes gradient-text {
+  to {
+    background-position: 200% center;
   }
 }

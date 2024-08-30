@@ -21,12 +21,6 @@ export const Header = () => {
         setIsMenuOpen((open) => !open);
       }, 200);
     } else {
-      // setTimeout(() => {
-      //   setIsMenuOpen((open) => !open);
-      //   setTimeout(() => {
-      //     document.querySelector("#menu")?.classList.add('menu-active');
-      //   }, 101);
-      // }, 100);
       setIsMenuOpen((open) => !open);
 
       setTimeout(() => {
@@ -41,7 +35,7 @@ export const Header = () => {
         <a href="/" className={styles.header__name}>KatOlista</a>
 
         <div className={styles.header__menu}>
-          <Button onClick={toggleMenuHandler}>
+          <Button buttonClassName={styles.header__button} onClick={toggleMenuHandler}>
             <BurgerMenuIcon
               className={cn(styles.header__icon, {
                 [styles.header__show]: !isMenuOpen,

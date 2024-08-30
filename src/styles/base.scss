@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -7,7 +11,6 @@ body {
   line-height: 130%;
   font-weight: 400;
   font-size: 18px;
-  color: var(--textColorMain);
   background-color: var(--backgroundColorMain);
   overflow-x: hidden;
 }
@@ -17,6 +20,8 @@ body {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  background-color: var(--backgroundColorMain);
+  color: var(--textColorMain);
 }
 
 .container {
@@ -37,4 +42,9 @@ body {
 
 .swiper-wrapper {
   align-items: center;
+}
+
+.noscroll {
+  overflow: hidden;
+  height: 100%;
 }
