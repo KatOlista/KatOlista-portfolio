@@ -59,7 +59,7 @@
   }
 
   &__info {
-    padding-top: 15px;
+    padding-top: 25px;
     font-size: 26px;
     line-height: 110%;
   }
@@ -83,10 +83,22 @@
     color: var(--textColorAccent);
   }
 
+  @media (min-width: 768px) {
+    &__info {
+      font-size: 42px;
+    }
+  }
+
   @media (min-width: 990px) {
     &__slider {
       max-width: 768px;
       margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__info {
+      font-size: 56px;
     }
   }
 }
