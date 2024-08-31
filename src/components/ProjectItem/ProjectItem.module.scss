@@ -22,6 +22,7 @@
   }
 
   &__title {
+    line-height: 105%;
     display: inline-block;
     font-size: 18px;
     background: linear-gradient(90deg, var(--textColorMain) 0%, var(--textColorAccent) 100%);
@@ -31,6 +32,7 @@
   }
 
   &__description {
+    line-height: 100%;
     padding-inline: 20px;
     display: flex;
     flex-direction: column;
@@ -68,6 +70,12 @@
     font-size: 16px;
     text-transform: uppercase;
     color: var(--textColorAccent);
+
+    transition: transform 0.3s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   &__current {
@@ -79,6 +87,7 @@
 
   &__active {
     opacity: 0;
+    pointer-events: none;
     filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
   }
 
@@ -94,6 +103,14 @@
       transform: scale(0.7);
       top: 120px;
     }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__description {
+      font-size: 22px;
+    }
   }
 
   @media (min-width: 990px) {
@@ -102,11 +119,36 @@
     &__wrapper:hover {
       filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
       transform: scale(1.05);
+      cursor: pointer;
     }
 
     &__visible {
-      top: 160px;
+      top: 60px;
       left: 1%;
+      transform: scale(0.5);
+    }
+
+    &__buttons {
+      margin: 0 auto;
+      max-width: 768px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__description {
+      font-size: 26px;
+    }
+
+    &__button:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__visible {
+      transform: scale(0.5);
     }
   }
 

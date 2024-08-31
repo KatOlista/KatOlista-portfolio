@@ -81,6 +81,12 @@
     font-size: 16px;
     text-transform: uppercase;
     color: var(--textColorAccent);
+
+    transition: transform 0.3s ease;
+  }
+
+  &__scroll:active {
+    transform: scale(0.95);
   }
 
   @media (min-width: 768px) {
@@ -93,6 +99,10 @@
     &__slider {
       max-width: 768px;
       margin: 0 auto;
+    }
+
+    &__scroll:hover {
+      transform: scale(0.95);
     }
   }
 

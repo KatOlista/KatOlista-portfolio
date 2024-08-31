@@ -44,11 +44,19 @@
   }
 
   &__cv {
+    display: inline-block;
     border-bottom: 2px solid var(--textColorAccent);
     font-weight: 600;
     font-size: 16px;
+    line-height: normal;
     text-transform: uppercase;
     color: var(--textColorAccent);
+
+    transition: transform 0.3s ease;
+  }
+
+  &__cv:active {
+    transform: scale(0.95);
   }
 
   @media (min-width: 768px) {
@@ -70,6 +78,12 @@
     &__buttons {
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 990px) {
+    &__cv:hover {
+      transform: scale(0.95);
     }
   }
 }

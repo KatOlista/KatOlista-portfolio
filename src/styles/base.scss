@@ -22,6 +22,8 @@ body {
   text-align: center;
   background-color: var(--backgroundColorMain);
   color: var(--textColorMain);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {

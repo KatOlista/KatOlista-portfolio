@@ -1,0 +1,24 @@
+.contact {
+  border: 1px solid var(--borderColorLight);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 22px;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    p {
+      padding-top: 38px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__arrow {
+    fill: var(--textColorAccent);
+  }
+
+  &__icon {}
+}

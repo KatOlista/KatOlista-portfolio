@@ -1,21 +1,30 @@
 import TaskFlow from '../assets/images/TaskFlow.jpg';
 
-import { Project } from "../types";
+import { Project } from '../types';
 
-export const menuList = ["About", "Projects", "Contacts"];
+export const menuList = ['About', 'Projects', 'Contacts'];
 
 export const skills = [
-  "React",
-  "Redux Toolkit",
-  "JavaScript",
-  "TypeScript",
-  "SASS",
-  "CSS3",
-  "HTML5",
-  "Git",
-  "Github",
-  "Fetch",
-  "REST API",
+  'React',
+  'Redux Toolkit',
+  'JavaScript',
+  'TypeScript',
+  'SASS',
+  'CSS3',
+  'HTML5',
+  'Git',
+  'Github',
+  'Bitbucket',
+  'Fetch',
+  'REST API',
+  'SQL',
+  'NPM',
+  'VS Code',
+  'FETCH',
+  'REST API',
+  'ClickUp',
+  'Bitrix',
+  'Trello'
 ];
 
 export const projects: Project[] = [
@@ -51,4 +60,48 @@ export const projects: Project[] = [
     code: 'https://github.com/KatOlista/todo-list-with-redux',
     technologies: 'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
     description: 'is a simple web application that allows to create and download your daily tasks to avoid missing anything.' },
+];
+
+import Phone from '../assets/icons/phone.svg?react';
+import LinkedIn from '../assets/icons/in.svg?react';
+import GitHub from '../assets/icons/gh.svg?react';
+import Telegram from '../assets/icons/telegram.svg?react';
+import Mail from '../assets/icons/mail.svg?react';
+
+export const contacts = [
+  {
+    id: 'phone',
+    title: 'Phone',
+    icon: Phone,
+    link: 'tel: +48533076993',
+    info: '+48533076993'
+  },
+  {
+    id: 'linkedin',
+    title: 'LinkedIn',
+    icon: LinkedIn,
+    link: 'https://www.linkedin.com/in/ola-katiushyna-katolista/',
+    info: ''
+  },
+  {
+    id: 'github',
+    title: 'GitHub',
+    icon: GitHub,
+    link: 'https://github.com/KatOlista',
+    info: ''
+  },
+  {
+    id: 'telegram',
+    title: 'Telegram',
+    icon: Telegram,
+    link: 'https://t.me/KatOlista',
+    info: ''
+  },
+  {
+    id: 'email',
+    title: 'Email',
+    icon: Mail,
+    link: 'mailto: ola.katiushyna@gmail.com',
+    info: 'ola.katiushyna@gmail.com'
+  },
 ];
