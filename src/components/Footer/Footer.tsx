@@ -7,9 +7,9 @@ export const Footer = () => {
         <div className={styles.footer__wrapper}>
           <div>Designed by DK</div>
 
-          <div>made by KatOlista</div>
-
           <div>2024</div>
+
+          <div>Made by KatOlista</div>
         </div>
       </div>
     </footer>

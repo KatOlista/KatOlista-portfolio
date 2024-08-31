@@ -71,7 +71,7 @@ import Mail from '../assets/icons/mail.svg?react';
 export const contacts = [
   {
     id: 'phone',
-    title: 'Phone',
+    title: '+48533076993',
     icon: Phone,
     link: 'tel: +48533076993',
     info: '+48533076993'
@@ -99,7 +99,7 @@ export const contacts = [
   },
   {
     id: 'email',
-    title: 'Email',
+    title: 'ola.katiushyna@gmail.com',
     icon: Mail,
     link: 'mailto: ola.katiushyna@gmail.com',
     info: 'ola.katiushyna@gmail.com'

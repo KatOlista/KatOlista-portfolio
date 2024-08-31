@@ -2,7 +2,7 @@
   border: 1px solid var(--borderColorLight);
   border-radius: 20px;
   padding: 20px;
-  font-size: 22px;
+  font-size: 18px;
 
   &__link {
     display: flex;
@@ -10,9 +10,10 @@
     justify-content: start;
 
     p {
-      padding-top: 38px;
+      padding-top: 25px;
       display: flex;
       justify-content: space-between;
+      gap: 12px;
     }
   }
 
@@ -21,4 +22,18 @@
   }
 
   &__icon {}
+
+  @media (min-width: 425px) {
+    font-size: 22px;
+  }
+
+  @media (min-width: 990px) {
+    flex: 25%;
+
+    &__link {
+      p {
+        padding-top: 50px;
+      }
+    }
+  }
 }

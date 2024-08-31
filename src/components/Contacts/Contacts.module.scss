@@ -6,4 +6,12 @@
     flex-direction: column;
     gap: 12px;
   }
+
+  @media (min-width: 768px) {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
