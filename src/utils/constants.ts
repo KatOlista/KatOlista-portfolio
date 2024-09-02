@@ -71,6 +71,7 @@ import Mail from '../assets/icons/mail.svg?react';
 export const contacts = [
   {
     id: 'phone',
+    target: '_self',
     title: '+48533076993',
     icon: Phone,
     link: 'tel: +48533076993',
@@ -78,6 +79,7 @@ export const contacts = [
   },
   {
     id: 'linkedin',
+    target: '_blanc',
     title: 'LinkedIn',
     icon: LinkedIn,
     link: 'https://www.linkedin.com/in/ola-katiushyna-katolista/',
@@ -85,6 +87,7 @@ export const contacts = [
   },
   {
     id: 'github',
+    target: '_blanc',
     title: 'GitHub',
     icon: GitHub,
     link: 'https://github.com/KatOlista',
@@ -92,6 +95,7 @@ export const contacts = [
   },
   {
     id: 'telegram',
+    target: '_blanc',
     title: 'Telegram',
     icon: Telegram,
     link: 'https://t.me/KatOlista',
@@ -99,6 +103,7 @@ export const contacts = [
   },
   {
     id: 'email',
+    target: '_self',
     title: 'ola.katiushyna@gmail.com',
     icon: Mail,
     link: 'mailto: ola.katiushyna@gmail.com',

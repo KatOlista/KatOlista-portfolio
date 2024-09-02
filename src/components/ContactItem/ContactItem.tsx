@@ -12,7 +12,7 @@ export const ContactItem: React.FC<Props> = ({ contact }) => {
   const Icon = contact.icon
   return (
     <li className={styles.contact}>
-      <a target='_blanc' href={contact.link} className={styles.contact__link}>
+      <a target={contact.target} href={contact.link} className={styles.contact__link}>
         <Icon className={styles.contact__icon} />
 
         <p>

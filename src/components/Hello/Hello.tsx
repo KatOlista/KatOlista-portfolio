@@ -9,6 +9,8 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import styles from "./Hello.module.scss";
 
+import LinkedIn from '../../assets/icons/in.svg?react';
+
 export const Hello = () => {
   const colorSlides = () => {
     const color = Math.floor(Math.random() * 5.99 + 1);
@@ -52,7 +54,10 @@ export const Hello = () => {
           Hello! How are you doing?
           <br />
           My name is &nbsp;
-          <span className={styles.hello__name}> Ola Katiushyna</span>
+            <a target="_blanc" className={styles.hello__name} href="https://www.linkedin.com/in/ola-katiushyna-katolista/">
+              Ola Katiushyna
+              <LinkedIn />
+            </a>
           . Welcome to my PORTFOLIO!
         </div>
 

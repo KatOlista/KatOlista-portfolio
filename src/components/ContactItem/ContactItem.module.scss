@@ -4,6 +4,8 @@
   padding: 20px;
   font-size: 18px;
 
+  transition: transform 0.3s ease;
+
   &__link {
     display: flex;
     flex-direction: column;
@@ -21,14 +23,16 @@
     fill: var(--textColorAccent);
   }
 
-  &__icon {}
-
   @media (min-width: 425px) {
     font-size: 22px;
   }
 
   @media (min-width: 990px) {
     flex: 25%;
+
+    &:hover {
+      transform: scale(0.95);
+    }
 
     &__link {
       p {

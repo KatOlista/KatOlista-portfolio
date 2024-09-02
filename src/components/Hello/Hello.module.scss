@@ -70,6 +70,7 @@
     text-shadow: 0px 0 var(--textColorMainShadow);
     letter-spacing: 0.1em;
     animation: shake 0.6s infinite alternate;
+    transition: transform 0.3s ease;
   }
 
   &__scroll {
@@ -102,6 +103,10 @@
     }
 
     &__scroll:hover {
+      transform: scale(0.95);
+    }
+
+    &__name:hover {
       transform: scale(0.95);
     }
   }
