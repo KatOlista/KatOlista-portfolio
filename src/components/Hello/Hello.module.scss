@@ -1,27 +1,27 @@
 .hello {
-  position: relative;
   padding-block: 150px;
-  overflow-x: hidden;
+  position: relative;
 
   &::before,
   &::after {
     content: "";
+    border-radius: 35% 48% 109% 47%;
     position: absolute;
     display: block;
     width: 267px;
     height: 264px;
-    background: url("../../assets/images/mobile-bg.svg") center / 100% 100%
-      no-repeat;
+    background: linear-gradient(180deg, rgba(3,255,224,1), rgba(5,165,255,1));
+    filter: blur(70px) opacity(50%);
   }
 
   &::before {
-    left: -35%;
-    top: 25%;
+    left: -56%;
+    top: 14%;
   }
 
   &::after {
-    right: -44%;
-    bottom: 20%;
+    right: -60%;
+    bottom: 0%;
   }
 
   &__slide {
@@ -60,6 +60,7 @@
 
   &__info {
     padding-top: 25px;
+    position: relative;
     font-size: 26px;
     line-height: 110%;
   }
@@ -90,13 +91,48 @@
     transform: scale(0.95);
   }
 
+  @media (min-width: 425px) {
+    &::before {
+      left: -45%;
+    }
+
+    &::after {
+      right: -45%;
+    }
+  }
+
   @media (min-width: 768px) {
+    &::before,
+    &::after {
+      width: 691px;
+      height: 530px;
+    }
+
+
+    &::before {
+      left: -50%;
+      top: -10%;
+    }
+
+    &::after {
+      right: -60%;
+      top: 70%;
+    }
+
     &__info {
       font-size: 42px;
     }
   }
 
   @media (min-width: 990px) {
+    &::before {
+      left: -35%;
+    }
+
+    &::after {
+      right: -50%;
+    }
+
     &__slider {
       max-width: 768px;
       margin: 0 auto;
@@ -112,8 +148,27 @@
   }
 
   @media (min-width: 1440px) {
+    &::before {
+      left: -25%;
+    }
+
+    &::after {
+      right: -30%;
+    }
+
     &__info {
       font-size: 56px;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    &::before {
+      left: -5%;
+    }
+
+    &::after {
+      right: -10%;
+      top: 40%;
     }
   }
 }

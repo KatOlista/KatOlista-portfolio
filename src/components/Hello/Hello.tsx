@@ -58,7 +58,9 @@ export const Hello = () => {
               Ola Katiushyna
               <LinkedIn />
             </a>
-          . Welcome to my PORTFOLIO!
+          .
+          <br />
+          Welcome to my PORTFOLIO!
         </div>
 
         <a className={styles.hello__scroll} href="#About">Scroll for more</a>
