@@ -59,9 +59,8 @@ export const Hello = () => {
           <a target='_blanc' className={styles.hello__name} href='https://www.linkedin.com/in/ola-katiushyna-katolista/'>
             Ola Katiushyna
 
-            <LinkedIn className={styles.hello__in} />
+            <LinkedIn className={styles.hello__in} />.
           </a>
-          .
 
           <br />
 

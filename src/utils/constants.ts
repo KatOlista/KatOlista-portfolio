@@ -1,5 +1,6 @@
 import TaskFlow from '../assets/images/TaskFlow.jpg';
 import BlueHouse from '../assets/images/blue-house.png';
+import NiceGadgets from '../assets/images/nice-gadgets.png';
 
 import { Project } from '../types';
 
@@ -39,6 +40,15 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: 'Nice Gadgets',
+    image: NiceGadgets,
+    demo: 'https://fe-jul23-team6.github.io/product_catalog/',
+    code: 'https://github.com/fe-jul23-team6/product_catalog',
+    technologies: 'Used technologies: React, TypeScript, Express + Sequelize and Node.js.',
+    description: 'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.'
+  },
+  {
+    id: 4,
     title: 'Loungewear',
     image: TaskFlow ,
     demo: 'https://katolista.github.io/byteex_product-page/',
