@@ -1,5 +1,5 @@
 import html2canvas from 'html2canvas';
-import { jsPDF } from "jspdf";
+import { jsPDF } from 'jspdf';
 
 import styles from './About.module.scss';
 
@@ -7,24 +7,51 @@ import pixeledPhoto from '../../assets/images/pixeled.webp';
 import { Button, Title } from '../';
 
 export const About = () => {
+  const removeEffects = () => {
+    const hello = document.getElementById('hello');
+    const footer = document.getElementById('footer');
+    const contacts = document.getElementById('contacts');
+
+    [hello, footer, contacts].forEach(element => {
+      element?.classList.add(`${styles['about__remove-effects']}`);
+    });
+
+    document.getElementById('name')?.classList.add(`${styles['about__remove-background']}`);
+  };
+
+  const returnEffects = () => {
+    const hello = document.getElementById('hello');
+    const footer = document.getElementById('footer');
+    const contacts = document.getElementById('contacts');
+
+    [hello, footer, contacts].forEach(element => {
+      element?.classList.remove(`${styles['about__remove-effects']}`);
+    });
+
+    document.getElementById('name')?.classList.remove(`${styles['about__remove-background']}`);
+  }
+
   const handleExportPageAsImg = () => {
     const capturedElement = document.getElementById('root') as HTMLElement;
+    removeEffects();
 
     html2canvas(capturedElement)?.then(canvas => {
-        const fileName = 'Katiushyna_portfolio_page.png';
-        const href = canvas.toDataURL('image/png');
-        const element = document.createElement('a');
-        element.href = href;
-        element.download = fileName;
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
+      const fileName = 'Katiushyna_portfolio_page.png';
+      const href = canvas.toDataURL('image/png');
+      const element = document.createElement('a');
+      element.href = href;
+      element.download = fileName;
+      document.body.appendChild(element);
+      element.click();
+
+      document.body.removeChild(element);
+      returnEffects();
     });
   };
 
   const handleExportPageAsPDF = () => {
     const capturedElement = document.getElementById('root') as HTMLElement;
-
+    removeEffects();
     const elementWidth = capturedElement.clientWidth;
     const elementHeight = capturedElement.clientHeight;
     const margin = 0;
@@ -36,17 +63,18 @@ export const About = () => {
       const pdf = new jsPDF('p', 'pt', [elementWidth, elementHeight]);
       pdf.addImage(href, 'PNG', margin, margin, elementWidth, elementHeight);
       pdf.save(fileName);
+      returnEffects();
     });
   };
 
   return (
     <section id='About' className={styles.about}>
-      <div className="container">
+      <div className='container'>
         <Title content='About' />
 
         <div className={styles.about__content}>
           <div className={styles.about__photo}>
-            <img className={styles.about__img} src={pixeledPhoto} alt="my photo" />
+            <img className={styles.about__img} src={pixeledPhoto} alt='my photo' />
           </div>
 
           <div className={styles.about__info}>
@@ -63,7 +91,7 @@ export const About = () => {
             </p>
 
             <div className={styles.about__buttons}>
-              <a className={styles.about__link} target="_blank" href="https://drive.google.com/file/d/1xVSynHjRJYF8jPljL-qX9M-Xryh7bfG5/view?usp=sharing">
+              <a className={styles.about__link} target='_blank' href='https://drive.google.com/file/d/1xVSynHjRJYF8jPljL-qX9M-Xryh7bfG5/view?usp=sharing'>
                 <span className={styles.about__cv}>view resume</span>
               </a>
 

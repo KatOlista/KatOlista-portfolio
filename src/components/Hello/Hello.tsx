@@ -1,13 +1,13 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import cn from "classnames";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import cn from 'classnames';
 
-import { skills } from "../../utils";
+import { skills } from '../../utils';
 
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import styles from "./Hello.module.scss";
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import styles from './Hello.module.scss';
 
 import LinkedIn from '../../assets/icons/in.svg?react';
 
@@ -27,8 +27,8 @@ export const Hello = () => {
   }
 
   return (
-    <section className={styles.hello}>
-      <div className="container">
+    <section id='hello' className={styles.hello}>
+      <div className='container'>
         <div className={styles.hello__slider}>
           <Swiper
             modules={[Autoplay]}
@@ -56,7 +56,7 @@ export const Hello = () => {
 
           My name is &nbsp;
 
-          <a target="_blanc" className={styles.hello__name} href="https://www.linkedin.com/in/ola-katiushyna-katolista/">
+          <a target='_blanc' className={styles.hello__name} href='https://www.linkedin.com/in/ola-katiushyna-katolista/'>
             Ola Katiushyna
 
             <LinkedIn className={styles.hello__in} />
@@ -68,7 +68,7 @@ export const Hello = () => {
           Welcome to my PORTFOLIO!
         </div>
 
-        <a className={styles.hello__scroll} href="#About">Scroll for more</a>
+        <a className={styles.hello__scroll} href='#About'>Scroll for more</a>
       </div>
     </section>
   );

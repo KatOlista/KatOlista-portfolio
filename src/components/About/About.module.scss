@@ -60,6 +60,15 @@
     transform: scale(0.95);
   }
 
+  &__remove-background {
+    background: none !important;
+  }
+
+  &__remove-effects::before,
+  &__remove-effects::after {
+    display: none !important;
+  }
+
   @media (min-width: 768px) {
     &__content {
       display: flex;

@@ -1,13 +1,12 @@
-import { useState } from "react";
-import cn from "classnames";
+import { useState } from 'react';
+import cn from 'classnames';
 
-import { Button, Menu, Navigation } from "../";
-// import { toggleMenu } from "../../utils";
+import { Button, Menu, Navigation } from '../';
 
-import styles from "./Header.module.scss";
+import styles from './Header.module.scss';
 
-import BurgerMenuIcon from "../../assets/icons/burger-menu.svg?react";
-import CloseIcon from "../../assets/icons/close.svg?react";
+import BurgerMenuIcon from '../../assets/icons/burger-menu.svg?react';
+import CloseIcon from '../../assets/icons/close.svg?react';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +14,7 @@ export const Header = () => {
   const toggleMenuHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null ) => {
     e?.stopPropagation();
 
-    const menu = document.querySelector("#menu");
+    const menu = document.querySelector('#menu');
 
     if (menu?.classList.contains('menu-active')) {
       menu?.classList.remove('menu-active');
@@ -27,15 +26,15 @@ export const Header = () => {
       setIsMenuOpen((open) => !open);
 
       setTimeout(() => {
-        document.querySelector("#menu")?.classList.add('menu-active');
+        document.querySelector('#menu')?.classList.add('menu-active');
       }, 101);
     }
   };
 
   return (
-    <section className="container">
+    <section className='container'>
       <div className={styles.header}>
-        <a href="/" className={styles.header__name}>KatOlista</a>
+        <a id='name' href='/' className={styles.header__name}>KatOlista</a>
 
         <div className={styles.header__menu}>
           <Button buttonClassName={styles.header__button} onClick={toggleMenuHandler}>

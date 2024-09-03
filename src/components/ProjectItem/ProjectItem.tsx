@@ -34,12 +34,9 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
 
   return (
     <li id={`li-${project.id}`} className={styles.project}>
-      {/* <a href={project.demo}> */}
       <div className={styles.project__wrapper} onClick={showDescriptionHandler}>
         <img className={styles.project__image} src={project.image} alt={project.title} />
       </div>
-        {/* <img className={styles.project__image} src={project.image} alt={project.title} /> */}
-      {/* </a> */}
 
       <div id={`item-${project.id}`} className={styles.project__description}>
         <div>
@@ -66,13 +63,15 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
               see case <Arrow className={styles.project__icon} />
             </a>
 
-            <a
-              className={styles.project__button}
-              target='_blanc'
-              href={project.code}
-            >
-              analyze code <Arrow className={styles.project__icon} />
-            </a>
+            {!!project.code && (
+              <a
+                className={styles.project__button}
+                target='_blanc'
+                href={project.code}
+              >
+                analyze code <Arrow className={styles.project__icon} />
+              </a>
+            )}
           </div>
         </div>
       </div>

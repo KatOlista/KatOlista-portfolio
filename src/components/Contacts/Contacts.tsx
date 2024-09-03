@@ -5,7 +5,7 @@ import styles from './Contacts.module.scss';
 
 export const Contacts = () => {
   return (
-    <section className={styles.contacts}>
+    <section id='contacts' className={styles.contacts}>
       <div className="container">
         <Title content='Contacts' />
 
