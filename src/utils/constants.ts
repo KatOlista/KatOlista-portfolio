@@ -1,4 +1,5 @@
 import TaskFlow from '../assets/images/TaskFlow.jpg';
+import BlueHouse from '../assets/images/blue-house.png';
 
 import { Project } from '../types';
 
@@ -30,11 +31,11 @@ export const projects: Project[] = [
   {
     id: 1,
     title: 'Blue House',
-    image: TaskFlow ,
+    image: BlueHouse ,
     demo: 'https://bluehouse.is/',
-    code: 'https://bluehouse.is/',
-    technologies: 'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
-    description: 'is a dynamic single-page website that extracts dynamic content from Headless CMS Sanity.'
+    code: '',
+    technologies: 'Used technologies: React, JavaScript, CSS, styled components, Swiper',
+    description: 'is a website of Reykjavik hotel Blue House Bed and Breakfast. It is at the end of the rebranding process. The mobile and tablet versions of the site have been added.'
   },
   {
     id: 2,
@@ -43,7 +44,7 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/byteex_product-page/',
     code: 'https://github.com/KatOlista/byteex_product-page',
     technologies: 'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
-    description: 'is a dynamic single-page website that extracts dynamic content from Headless CMS Sanity.'
+    description: 'is a single-page website that extracts dynamic content from Headless CMS Sanity.'
   },
   {
     id: 3,
