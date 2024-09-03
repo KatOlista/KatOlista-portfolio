@@ -1,14 +1,35 @@
-import styles from "./Menu.module.scss";
+import React, { useRef } from 'react';
 
-import Arrow from "../../assets/icons/arrow.svg?react";
-import { menuList } from "../../utils/constants";
+import { menuList } from '../../utils';
+import { useClickOutside } from '../../hooks/useClickOutside'
 
-export const Menu = () => {
+import styles from './Menu.module.scss';
+
+import Arrow from '../../assets/icons/arrow.svg?react';
+
+type Props = {
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const Menu:React.FC<Props> = ({ setIsMenuOpen }) => {
+
+  const closeMenuHandler = () => {
+    document.querySelector("#menu")?.classList.remove('menu-active');
+
+      setTimeout(() => {
+        setIsMenuOpen(false);
+      }, 200);
+  };
+
+  const menuRef = useRef(null);
+
+  useClickOutside(menuRef, closeMenuHandler);
+
   return (
-    <ul id="menu" className={styles.menu}>
+    <ul ref={menuRef} id='menu' className={styles.menu}>
       {menuList.map((menuItem: string) => (
         <li className={styles.menu__li} key={menuItem}>
-          <a className={styles.menu__link} href={`#${menuItem}`}>
+          <a onClick={closeMenuHandler} className={styles.menu__link} href={`#${menuItem}`}>
             {menuItem} <Arrow />
           </a>
         </li>

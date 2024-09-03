@@ -1,17 +1,20 @@
+import { useState } from "react";
 import cn from "classnames";
 
 import { Button, Menu, Navigation } from "../";
+// import { toggleMenu } from "../../utils";
 
 import styles from "./Header.module.scss";
 
 import BurgerMenuIcon from "../../assets/icons/burger-menu.svg?react";
 import CloseIcon from "../../assets/icons/close.svg?react";
-import { useState } from "react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenuHandler = () => {
+  const toggleMenuHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null ) => {
+    e?.stopPropagation();
+
     const menu = document.querySelector("#menu");
 
     if (menu?.classList.contains('menu-active')) {
@@ -53,7 +56,7 @@ export const Header = () => {
         </div>
       </div>
 
-      { isMenuOpen && (<Menu />)}
+      { isMenuOpen && (<Menu setIsMenuOpen={setIsMenuOpen} />)}
     </section>
   );
 };

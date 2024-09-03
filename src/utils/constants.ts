@@ -21,7 +21,6 @@ export const skills = [
   'NPM',
   'VS Code',
   'FETCH',
-  'REST API',
   'ClickUp',
   'Bitrix',
   'Trello'

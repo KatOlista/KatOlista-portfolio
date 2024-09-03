@@ -1,8 +1,10 @@
 .contact {
+  // position: relative;
   border: 1px solid var(--borderColorLight);
   border-radius: 20px;
   padding: 20px;
   font-size: 18px;
+  background-color: var(--backgroundColorSecondary);
 
   transition: transform 0.3s ease;
 

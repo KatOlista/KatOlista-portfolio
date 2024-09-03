@@ -1,13 +1,51 @@
 .footer {
+  position: relative;
+  padding-top: 100px;
   padding-bottom: 30px;
   font-size: 16px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    border-radius: 35% 48% 109% 47%;
+    position: absolute;
+    right: -230%;
+    top: 67%;
+    display: block;
+    width: 881px;
+    height: 415px;
+    background: linear-gradient(180deg, rgba(3,255,224,1), rgba(5,165,255,1));
+    filter: blur(70px) opacity(50%);
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
+  @media (min-width: 425px) {
+    &::after {
+      right: -158%;
+      top: 79%;
+    }
+  }
+
   @media (min-width: 768px) {
     padding-bottom: 50px;
+
+    &::after {
+      right: -158%;
+      top: 79%;
+    }
   }
+
+  @media (min-width: 990px) {}
+
+  @media (min-width: 1440px) {
+    &::after {
+      right: -13%;
+    }
+  }
+
+  @media (min-width: 2000px) {}
 }
