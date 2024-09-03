@@ -53,13 +53,18 @@ export const Hello = () => {
         <div className={styles.hello__info}>
           Hello! How are you doing?
           <br />
+
           My name is &nbsp;
-            <a target="_blanc" className={styles.hello__name} href="https://www.linkedin.com/in/ola-katiushyna-katolista/">
-              Ola Katiushyna
-              <LinkedIn />
-            </a>
+
+          <a target="_blanc" className={styles.hello__name} href="https://www.linkedin.com/in/ola-katiushyna-katolista/">
+            Ola Katiushyna
+
+            <LinkedIn className={styles.hello__in} />
+          </a>
           .
+
           <br />
+
           Welcome to my PORTFOLIO!
         </div>
 
