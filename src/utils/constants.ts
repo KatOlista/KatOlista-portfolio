@@ -48,6 +48,20 @@ export const projects: Project[] = [
     description: 'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.'
   },
   {
+    id: 3,
+    title: 'TaskFlow',
+    image: TaskFlow,
+    demo: 'https://katolista.github.io/todo-list-with-redux/',
+    code: 'https://github.com/KatOlista/todo-list-with-redux',
+    technologies: 'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
+    description: 'is a simple web application that allows to create and download your daily tasks to avoid missing anything.'
+  },
+
+
+
+
+
+  {
     id: 4,
     title: 'Loungewear',
     image: TaskFlow ,
@@ -57,22 +71,13 @@ export const projects: Project[] = [
     description: 'is a single-page website that extracts dynamic content from Headless CMS Sanity.'
   },
   {
-    id: 3,
+    id: 5,
     title: 'Masks',
     image: TaskFlow,
     demo: 'https://katolista.github.io/next-g-test-task/',
     code: 'https://github.com/KatOlista/next-g-test-task',
     technologies: 'Used technologies: Gulp and SASS.',
     description: 'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.'
-  },
-  {
-    id: 4,
-    title: 'Nice Gadgets',
-    image: TaskFlow,
-    demo: 'https://fe-jul23-team6.github.io/product_catalog/',
-    code: 'https://github.com/fe-jul23-team6/product_catalog',
-    technologies: 'Used technologies: React, TypeScript, Express + Sequelize and Node.js.',
-    description: 'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.'
   },
   {
     id: 5,
