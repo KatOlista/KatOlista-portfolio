@@ -1,4 +1,4 @@
-import { Hello, Header, About, Projects, Contacts, Footer } from "./components";
+import { Hello, Header, About, Projects, Contacts, Footer } from './components';
 
 export const App = () => {
   return (

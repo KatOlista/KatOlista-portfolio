@@ -5,12 +5,12 @@ import styles from './Contacts.module.scss';
 
 export const Contacts = () => {
   return (
-    <section id='contacts' className={styles.contacts}>
+    <section id="Contacts" className={styles.contacts}>
       <div className="container">
-        <Title content='Contacts' />
+        <Title content="Contacts" />
 
         <ul className={styles.contacts__list}>
-          {contacts.map(contact => (
+          {contacts.map((contact) => (
             <ContactItem key={contact.id} contact={contact} />
           ))}
         </ul>

@@ -1,6 +1,6 @@
-import styles from "./Navigation.module.scss";
+import styles from './Navigation.module.scss';
 
-import { menuList } from "../../utils";
+import { menuList } from '../../utils';
 
 export const Navigation = () => {
   return (

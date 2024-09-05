@@ -11,7 +11,9 @@ import CloseIcon from '../../assets/icons/close.svg?react';
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenuHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null ) => {
+  const toggleMenuHandler = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
+  ) => {
     e?.stopPropagation();
 
     const menu = document.querySelector('#menu');
@@ -32,12 +34,17 @@ export const Header = () => {
   };
 
   return (
-    <section className='container'>
+    <section className="container">
       <div className={styles.header}>
-        <a id='name' href='/' className={styles.header__name}>KatOlista</a>
+        <a id="name" href="/" className={styles.header__name}>
+          KatOlista
+        </a>
 
         <div className={styles.header__menu}>
-          <Button buttonClassName={styles.header__button} onClick={toggleMenuHandler}>
+          <Button
+            buttonClassName={styles.header__button}
+            onClick={toggleMenuHandler}
+          >
             <BurgerMenuIcon
               className={cn(styles.header__icon, {
                 [styles.header__show]: !isMenuOpen,
@@ -55,7 +62,7 @@ export const Header = () => {
         </div>
       </div>
 
-      { isMenuOpen && (<Menu setIsMenuOpen={setIsMenuOpen} />)}
+      {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
     </section>
   );
 };

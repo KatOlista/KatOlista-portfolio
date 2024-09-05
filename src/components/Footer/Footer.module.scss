@@ -6,7 +6,7 @@
   overflow: hidden;
 
   &::after {
-    content: "";
+    content: '';
     border-radius: 35% 48% 109% 47%;
     position: absolute;
     right: -230%;
@@ -14,7 +14,11 @@
     display: block;
     width: 881px;
     height: 415px;
-    background: linear-gradient(180deg, rgba(3,255,224,1), rgba(5,165,255,1));
+    background: linear-gradient(
+      180deg,
+      rgba(3, 255, 224, 1),
+      rgba(5, 165, 255, 1)
+    );
     filter: blur(70px) opacity(50%);
   }
 
@@ -39,7 +43,8 @@
     }
   }
 
-  @media (min-width: 990px) {}
+  @media (min-width: 990px) {
+  }
 
   @media (min-width: 1440px) {
     &::after {
@@ -47,5 +52,6 @@
     }
   }
 
-  @media (min-width: 2000px) {}
+  @media (min-width: 2000px) {
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import { menuList } from '../../utils';
-import { useClickOutside } from '../../hooks/useClickOutside'
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 import styles from './Menu.module.scss';
 
@@ -11,14 +11,13 @@ type Props = {
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Menu:React.FC<Props> = ({ setIsMenuOpen }) => {
-
+export const Menu: React.FC<Props> = ({ setIsMenuOpen }) => {
   const closeMenuHandler = () => {
     document.querySelector('#menu')?.classList.remove('menu-active');
 
-      setTimeout(() => {
-        setIsMenuOpen(false);
-      }, 200);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 200);
   };
 
   const menuRef = useRef(null);
@@ -26,10 +25,14 @@ export const Menu:React.FC<Props> = ({ setIsMenuOpen }) => {
   useClickOutside(menuRef, closeMenuHandler);
 
   return (
-    <ul ref={menuRef} id='menu' className={styles.menu}>
+    <ul ref={menuRef} id="menu" className={styles.menu}>
       {menuList.map((menuItem: string) => (
         <li className={styles.menu__li} key={menuItem}>
-          <a onClick={closeMenuHandler} className={styles.menu__link} href={`#${menuItem}`}>
+          <a
+            onClick={closeMenuHandler}
+            className={styles.menu__link}
+            href={`#${menuItem}`}
+          >
             {menuItem} <Arrow />
           </a>
         </li>

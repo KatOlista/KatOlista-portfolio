@@ -19,7 +19,12 @@
     display: block;
 
     &__li:hover {
-      background: linear-gradient(90deg, var(--textColorMain) 0%, var(--textColorAccent) 50%, var(--backgroundColorMain) 100%);
+      background: linear-gradient(
+        90deg,
+        var(--textColorMain) 0%,
+        var(--textColorAccent) 50%,
+        var(--backgroundColorMain) 100%
+      );
       background-size: 200% auto;
       background-clip: text;
       -webkit-background-clip: text;

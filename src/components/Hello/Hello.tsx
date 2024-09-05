@@ -27,8 +27,8 @@ export const Hello = () => {
   }
 
   return (
-    <section id='hello' className={styles.hello}>
-      <div className='container'>
+    <section id="hello" className={styles.hello}>
+      <div className="container">
         <div className={styles.hello__slider}>
           <Swiper
             modules={[Autoplay]}
@@ -53,21 +53,22 @@ export const Hello = () => {
         <div className={styles.hello__info}>
           Hello! How are you doing?
           <br />
-
           My name is &nbsp;
-
-          <a target='_blanc' className={styles.hello__name} href='https://www.linkedin.com/in/ola-katiushyna-katolista/'>
+          <a
+            target="_blanc"
+            className={styles.hello__name}
+            href="https://www.linkedin.com/in/ola-katiushyna-katolista/"
+          >
             Ola Katiushyna
-
             <LinkedIn className={styles.hello__in} />.
           </a>
-
           <br />
-
           Welcome to my PORTFOLIO!
         </div>
 
-        <a className={styles.hello__scroll} href='#About'>Scroll for more</a>
+        <a className={styles.hello__scroll} href="#About">
+          Scroll for more
+        </a>
       </div>
     </section>
   );

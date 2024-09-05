@@ -5,12 +5,12 @@ import styles from './Projects.module.scss';
 
 export const Projects = () => {
   return (
-    <section id='Projects' className={styles.projects}>
+    <section id="Projects" className={styles.projects}>
       <div className="container">
-        <Title content='Projects' />
+        <Title content="Projects" />
 
         <ul className={styles.projects__list}>
-          {projects.map(project => (
+          {projects.map((project) => (
             <ProjectItem key={project.id} project={project} />
           ))}
         </ul>

@@ -7,13 +7,13 @@ type Props = {
 };
 
 const buttonStyle: React.CSSProperties = {
-  outline: "none",
-  boxShadow: "none",
-  border: "none",
-  WebkitAppearance: "none",
-  MozAppearance: "none",
-  appearance: "none",
-  WebkitTapHighlightColor: "transparent",
+  outline: 'none',
+  boxShadow: 'none',
+  border: 'none',
+  WebkitAppearance: 'none',
+  MozAppearance: 'none',
+  appearance: 'none',
+  WebkitTapHighlightColor: 'transparent',
 };
 
 export const Button: React.FC<Props> = ({

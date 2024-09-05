@@ -1,4 +1,4 @@
-import TaskFlow from '../assets/images/TaskFlow.jpg';
+import TaskFlow from '../assets/images/task-flow.png';
 import BlueHouse from '../assets/images/blue-house.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
 
@@ -25,18 +25,20 @@ export const skills = [
   'FETCH',
   'ClickUp',
   'Bitrix',
-  'Trello'
+  'Trello',
 ];
 
 export const projects: Project[] = [
   {
     id: 1,
     title: 'Blue House',
-    image: BlueHouse ,
+    image: BlueHouse,
     demo: 'https://bluehouse.is/',
     code: '',
-    technologies: 'Used technologies: React, JavaScript, CSS, styled components, Swiper',
-    description: 'is a website of Reykjavik hotel Blue House Bed and Breakfast. It is at the end of the rebranding process. The mobile and tablet versions of the site have been added.'
+    technologies:
+      'Used technologies: React, JavaScript, CSS, styled components, Swiper',
+    description:
+      'is a website of Reykjavik hotel Blue House Bed and Breakfast. It is at the end of the rebranding process. The mobile and tablet versions of the site have been added.',
   },
   {
     id: 2,
@@ -44,8 +46,10 @@ export const projects: Project[] = [
     image: NiceGadgets,
     demo: 'https://fe-jul23-team6.github.io/product_catalog/',
     code: 'https://github.com/fe-jul23-team6/product_catalog',
-    technologies: 'Used technologies: React, TypeScript, Express + Sequelize and Node.js.',
-    description: 'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.'
+    technologies:
+      'Used technologies: React, TypeScript, Express + Sequelize and Node.js.',
+    description:
+      'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.',
   },
   {
     id: 3,
@@ -53,22 +57,22 @@ export const projects: Project[] = [
     image: TaskFlow,
     demo: 'https://katolista.github.io/todo-list-with-redux/',
     code: 'https://github.com/KatOlista/todo-list-with-redux',
-    technologies: 'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
-    description: 'is a simple web application that allows to create and download your daily tasks to avoid missing anything.'
+    technologies:
+      'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
+    description:
+      'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },
-
-
-
-
 
   {
     id: 4,
     title: 'Loungewear',
-    image: TaskFlow ,
+    image: TaskFlow,
     demo: 'https://katolista.github.io/byteex_product-page/',
     code: 'https://github.com/KatOlista/byteex_product-page',
-    technologies: 'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
-    description: 'is a single-page website that extracts dynamic content from Headless CMS Sanity.'
+    technologies:
+      'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
+    description:
+      'is a single-page website that extracts dynamic content from Headless CMS Sanity.',
   },
   {
     id: 5,
@@ -77,7 +81,8 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/next-g-test-task/',
     code: 'https://github.com/KatOlista/next-g-test-task',
     technologies: 'Used technologies: Gulp and SASS.',
-    description: 'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.'
+    description:
+      'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
   {
     id: 5,
@@ -85,8 +90,10 @@ export const projects: Project[] = [
     image: TaskFlow,
     demo: 'https://katolista.github.io/todo-list-with-redux/',
     code: 'https://github.com/KatOlista/todo-list-with-redux',
-    technologies: 'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
-    description: 'is a simple web application that allows to create and download your daily tasks to avoid missing anything.'
+    technologies:
+      'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
+    description:
+      'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },
 ];
 
@@ -103,7 +110,7 @@ export const contacts = [
     title: '+48533076993',
     icon: Phone,
     link: 'tel: +48533076993',
-    info: '+48533076993'
+    info: '+48533076993',
   },
   {
     id: 'linkedin',
@@ -111,7 +118,7 @@ export const contacts = [
     title: 'LinkedIn',
     icon: LinkedIn,
     link: 'https://www.linkedin.com/in/ola-katiushyna-katolista/',
-    info: ''
+    info: '',
   },
   {
     id: 'github',
@@ -119,7 +126,7 @@ export const contacts = [
     title: 'GitHub',
     icon: GitHub,
     link: 'https://github.com/KatOlista',
-    info: ''
+    info: '',
   },
   {
     id: 'telegram',
@@ -127,7 +134,7 @@ export const contacts = [
     title: 'Telegram',
     icon: Telegram,
     link: 'https://t.me/KatOlista',
-    info: ''
+    info: '',
   },
   {
     id: 'email',
@@ -135,6 +142,6 @@ export const contacts = [
     title: 'ola.katiushyna@gmail.com',
     icon: Mail,
     link: 'mailto: ola.katiushyna@gmail.com',
-    info: 'ola.katiushyna@gmail.com'
+    info: 'ola.katiushyna@gmail.com',
   },
 ];
