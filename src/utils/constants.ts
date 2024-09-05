@@ -1,6 +1,7 @@
 import TaskFlow from '../assets/images/task-flow.png';
 import BlueHouse from '../assets/images/blue-house.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
+import Nothing from '../assets/images/nothing.png';
 
 import { Project } from '../types';
 
@@ -62,9 +63,20 @@ export const projects: Project[] = [
     description:
       'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },
-
   {
     id: 4,
+    title: 'Nothing',
+    image: Nothing,
+    demo: 'katolista.github.io/nothing-landing/',
+    code: 'https://github.com/KatOlista/nothing-landing',
+    technologies:
+      'Used technologies: SCSS, and HTML5',
+    description:
+      'The landing page is a static single-page website, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
+  },
+
+  {
+    id: 6,
     title: 'Loungewear',
     image: TaskFlow,
     demo: 'https://katolista.github.io/byteex_product-page/',
@@ -83,18 +95,7 @@ export const projects: Project[] = [
     technologies: 'Used technologies: Gulp and SASS.',
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
-  },
-  {
-    id: 5,
-    title: 'TaskFlow',
-    image: TaskFlow,
-    demo: 'https://katolista.github.io/todo-list-with-redux/',
-    code: 'https://github.com/KatOlista/todo-list-with-redux',
-    technologies:
-      'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
-    description:
-      'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
-  },
+  }
 ];
 
 import Phone from '../assets/icons/phone.svg?react';

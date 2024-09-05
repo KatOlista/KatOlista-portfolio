@@ -56,6 +56,7 @@
 
   &__back {
     margin-bottom: 25px;
+    width: 25px;
     fill: #f5fffe;
     transition: fill 0.3s ease;
   }
@@ -112,11 +113,11 @@
     }
 
     &__title {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     &__description {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 
@@ -135,17 +136,12 @@
       transform: scale(0.5);
     }
 
-    &__buttons {
-      margin: 0 auto;
-      max-width: 768px;
-    }
-
-    &__title {
-      font-size: 28px;
-    }
-
     &__description {
-      font-size: 26px;
+      font-size: 18px;
+    }
+
+    &__info {
+      max-width: 90%;
     }
 
     &__button:hover {
@@ -156,6 +152,10 @@
   @media (min-width: 1440px) {
     &__visible {
       transform: scale(0.5);
+    }
+
+    &__info {
+      max-width: 70%;
     }
   }
 }

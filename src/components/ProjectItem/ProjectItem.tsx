@@ -60,14 +60,14 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
             <Back className={styles.project__back} />
           </Button>
 
-          <div>
+          <div className={styles.project__info}>
             <h2 className={styles.project__title}>{project.title}</h2>
             &nbsp;
             {project.description}
           </div>
         </div>
 
-        <div>
+        <div className={styles.project__info}>
           {project.technologies}
 
           <div className={styles.project__buttons}>
