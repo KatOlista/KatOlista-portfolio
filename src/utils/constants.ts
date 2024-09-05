@@ -1,7 +1,8 @@
+import Nothing from '../assets/images/nothing.png';
 import TaskFlow from '../assets/images/task-flow.png';
 import BlueHouse from '../assets/images/blue-house.png';
+import Respirator from '../assets/images/respirator.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
-import Nothing from '../assets/images/nothing.png';
 
 import { Project } from '../types';
 
@@ -69,10 +70,19 @@ export const projects: Project[] = [
     image: Nothing,
     demo: 'katolista.github.io/nothing-landing/',
     code: 'https://github.com/KatOlista/nothing-landing',
-    technologies:
-      'Used technologies: SCSS, and HTML5',
+    technologies: 'Used technologies: SCSS, and HTML5',
     description:
       'The landing page is a static single-page website, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
+  },
+  {
+    id: 5,
+    title: 'Respirators',
+    image: Respirator,
+    demo: 'https://katolista.github.io/respirators/',
+    code: 'https://github.com/KatOlista/respirators',
+    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
+    description:
+      'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
 
   {
@@ -90,12 +100,12 @@ export const projects: Project[] = [
     id: 5,
     title: 'Masks',
     image: TaskFlow,
-    demo: 'https://katolista.github.io/next-g-test-task/',
-    code: 'https://github.com/KatOlista/next-g-test-task',
-    technologies: 'Used technologies: Gulp and SASS.',
+    demo: 'https://katolista.github.io/respirators/',
+    code: 'https://github.com/KatOlista/respirators',
+    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
-  }
+  },
 ];
 
 import Phone from '../assets/icons/phone.svg?react';
