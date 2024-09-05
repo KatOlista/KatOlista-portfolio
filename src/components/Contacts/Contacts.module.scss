@@ -1,5 +1,4 @@
 .contacts {
-  // padding-bottom: 100px;
   position: relative;
 
   &::before {
@@ -16,19 +15,6 @@
     );
     filter: blur(70px) opacity(50%);
   }
-
-  // &::after {
-  //   content: "";
-  //   border-radius: 35% 48% 109% 47%;
-  //   position: absolute;
-  //   right: -210%;
-  //   bottom: -50%;
-  //   display: block;
-  //   width: 881px;
-  //   height: 415px;
-  //   background: linear-gradient(180deg, rgba(3,255,224,1), rgba(5,165,255,1));
-  //   filter: blur(70px) opacity(50%);
-  // }
 
   &::before {
     left: -210%;
