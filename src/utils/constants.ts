@@ -69,7 +69,7 @@ export const projects: Project[] = [
     id: 4,
     title: 'Nothing',
     image: Nothing,
-    demo: 'katolista.github.io/nothing-landing/',
+    demo: 'https://katolista.github.io/nothing-landing/',
     code: 'https://github.com/KatOlista/nothing-landing',
     technologies: 'Used technologies: SCSS, and HTML5',
     description:
