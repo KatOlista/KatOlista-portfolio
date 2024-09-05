@@ -7,6 +7,7 @@
   align-items: center;
 
   &__name {
+    position: relative;
     padding-block: 30px;
     background: linear-gradient(
       90deg,
@@ -19,6 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient-text 1.5s linear;
+    z-index: 3;
   }
 
   &__icon {
@@ -46,6 +48,12 @@
   @media (min-width: 768px) {
     &__button {
       display: none;
+    }
+  }
+
+  @media (min-width: 990px) {
+    &__name {
+      cursor: pointer;
     }
   }
 }

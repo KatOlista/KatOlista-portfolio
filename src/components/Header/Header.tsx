@@ -36,7 +36,7 @@ export const Header = () => {
   return (
     <section className="container">
       <div className={styles.header}>
-        <a id="name" href="/" className={styles.header__name}>
+        <a id="name" href="./" className={styles.header__name}>
           KatOlista
         </a>
 
