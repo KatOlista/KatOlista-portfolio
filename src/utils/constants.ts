@@ -3,6 +3,7 @@ import TaskFlow from '../assets/images/task-flow.png';
 import BlueHouse from '../assets/images/blue-house.png';
 import Respirator from '../assets/images/respirator.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
+import HomeTextile from '../assets/images/home-textile.png';
 
 import { Project } from '../types';
 
@@ -84,27 +85,16 @@ export const projects: Project[] = [
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
-
   {
     id: 6,
-    title: 'Loungewear',
-    image: TaskFlow,
-    demo: 'https://katolista.github.io/byteex_product-page/',
-    code: 'https://github.com/KatOlista/byteex_product-page',
+    title: 'HomeTextile',
+    image: HomeTextile,
+    demo: 'https://katolista.github.io/home-textile/',
+    code: 'https://github.com/KatOlista/home-textile',
     technologies:
       'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
     description:
       'is a single-page website that extracts dynamic content from Headless CMS Sanity.',
-  },
-  {
-    id: 5,
-    title: 'Masks',
-    image: TaskFlow,
-    demo: 'https://katolista.github.io/respirators/',
-    code: 'https://github.com/KatOlista/respirators',
-    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
-    description:
-      'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
 ];
 
