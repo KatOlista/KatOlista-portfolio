@@ -90,7 +90,7 @@
     padding: 20px 20px 30px;
     pointer-events: auto;
     opacity: 1;
-    z-index: 20;
+    z-index: 22;
   }
 
   &__active {
@@ -102,7 +102,7 @@
   &__visible {
     position: fixed;
     top: 210px;
-    z-index: 21;
+    z-index: 23;
     opacity: 1;
   }
 
