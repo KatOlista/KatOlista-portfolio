@@ -28,11 +28,7 @@ body {
 }
 
 .container {
-  padding-inline: 5px;
-
-  @media (min-width: 425px) {
-    padding-inline: 20px;
-  }
+  padding-inline: 20px;
 
   @media (min-width: 768px) {
     padding-inline: 50px;

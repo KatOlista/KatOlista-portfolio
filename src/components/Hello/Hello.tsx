@@ -18,7 +18,7 @@ export const Hello = () => {
     return `${styles[`hello__${color}`]}`;
   };
 
-  let slidesPerView = 2.5;
+  let slidesPerView = 2;
 
   if (window.innerWidth <= 767 && window.innerWidth > 320) {
     slidesPerView = 3;
