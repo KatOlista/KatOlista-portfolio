@@ -13,14 +13,25 @@ type Props = {
 };
 
 export const ProjectItem: React.FC<Props> = ({ project }) => {
+  const link = document.createElement('a');
+  link.href = project.demo;
+  link.target = '_blank';
+
   const showDescriptionHandler = () => {
-    document
-      .querySelector(`#item-${project.id}`)
-      ?.classList.add(`${styles.project__current}`);
+    const currentItem = document.querySelector(`#item-${project.id}`);
+
+    currentItem?.classList.add(`${styles.project__current}`);
+
+    link.classList.add(`${styles.project__link}`);
+
+    currentItem?.append(link);
+
     document.body.classList.add('noscroll');
+
     document
       .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
       ?.classList.add(`${styles.project__active}`);
+
     setTimeout(() => {
       document
         .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
@@ -46,11 +57,12 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
 
   return (
     <li id={`li-${project.id}`} className={styles.project}>
-      <div className={styles.project__wrapper} onClick={showDescriptionHandler}>
+      <div className={styles.project__wrapper}>
         <img
           className={styles.project__image}
           src={project.image}
           alt={project.title}
+          onClick={showDescriptionHandler}
         />
       </div>
 

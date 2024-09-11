@@ -72,9 +72,9 @@
   &__name {
     display: inline-block;
     position: relative;
-    text-shadow: 0px 0 var(--textColorMainShadow);
     letter-spacing: 0.1em;
-    animation: shake 0.6s infinite alternate;
+    font-weight: 600;
+    animation: move 3s infinite;
     transition: transform 0.3s ease;
   }
 
@@ -186,47 +186,22 @@
   }
 }
 
-@keyframes shake {
+@keyframes move {
   0% {
+    left: 0;
+  }
+
+  15% {
+    left: -5px;
+  }
+
+  35% {
     top: 0;
-    text-shadow: 1px 1px var(--textColorMainShadow);
-  }
-
-  1% {
-    top: 1px;
-    text-shadow: -5px 2px var(--textColorMainShadow);
-  }
-
-  10% {
-    top: 0px;
-  }
-
-  20% {
-    top: 1px;
-  }
-
-  40% {
-    top: 0px;
-    text-shadow: 0 0 var(--textColorSecondaryShadow);
-  }
-
-  50% {
-    top: 1px;
-    left: -1px;
-    text-shadow: 4px 2px var(--textColorSecondaryShadow);
-  }
-
-  70% {
-    top: 0px;
-    left: 0px;
-  }
-
-  90% {
-    top: 1px;
+    left: 0;
   }
 
   100% {
     top: 0;
-    text-shadow: 1px 1px var(--textColorMainShadow);
+    left: 0;
   }
 }
