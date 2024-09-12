@@ -113,6 +113,12 @@
     top: 25%;
   }
 
+  @media (max-width: 424px) {
+    &__visible {
+      top: 250px;
+    }
+  }
+
   @media (min-width: 768px) {
     &__visible {
       transform: scale(0.7);
