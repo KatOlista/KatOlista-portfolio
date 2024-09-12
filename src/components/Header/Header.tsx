@@ -21,11 +21,14 @@ export const Header = () => {
     if (menu?.classList.contains('menu-active')) {
       menu?.classList.remove('menu-active');
 
+      document.body.classList.remove('noscroll');
+
       setTimeout(() => {
         setIsMenuOpen((open) => !open);
       }, 200);
     } else {
       setIsMenuOpen((open) => !open);
+      document.body.classList.add('noscroll');
 
       setTimeout(() => {
         document.querySelector('#menu')?.classList.add('menu-active');
