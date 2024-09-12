@@ -13,46 +13,20 @@ type Props = {
 };
 
 export const ProjectItem: React.FC<Props> = ({ project }) => {
-  // const link = document.createElement('a');
-  // link.href = project.demo;
-  // link.target = '_blank';
-
   const showDescriptionHandler = () => {
     const currentItem = document.querySelector(`#item-${project.id}`);
 
     currentItem?.classList.add(`${styles.project__current}`);
 
-    // link.classList.add(`${styles.project__link}`);
-
-    // currentItem?.append(link);
-
     document.body.classList.add('noscroll');
-
-    document
-      .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
-      ?.classList.add(`${styles.project__active}`);
-
-    setTimeout(() => {
-      document
-        .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
-        ?.classList.add(`${styles.project__visible}`);
-    }, 300);
   };
 
   const closeDescriptionHandler = () => {
     document
       .querySelector(`#item-${project.id}`)
       ?.classList.remove(`${styles.project__current}`);
-    document
-      .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
-      ?.classList.remove(`${styles.project__visible}`);
-    document.body.classList.remove('noscroll');
 
-    setTimeout(() => {
-      document
-        .querySelector(`#li-${project.id} .${styles.project__wrapper}`)
-        ?.classList.remove(`${styles.project__active}`);
-    }, 300);
+    document.body.classList.remove('noscroll');
   };
 
   return (
