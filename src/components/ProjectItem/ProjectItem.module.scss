@@ -15,8 +15,9 @@
     top: auto;
 
     transition:
-      opacity 0.2s ease,
+      opacity 0.3s ease,
       filter 0.3s ease,
+      z-index 0.3s ease,
       transform 0.3s ease;
   }
 
@@ -99,39 +100,43 @@
     filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
   }
 
-  &__visible {
-    position: fixed;
-    top: 210px;
-    z-index: 23;
-    opacity: 1;
+  &__img {
+    max-width: 100%;
+    border-radius: 20px;
   }
 
+  // &__visible {
+  //   position: fixed;
+  //   top: 210px;
+  //   z-index: 23;
+  //   opacity: 1;
+  // }
+
   &__link {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 25%;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 50%;
   }
 
   @media (max-width: 375px) {
-    &__visible {
-      top: 250px;
-      transform: scale(0.8);
-    }
+    // &__visible {
+    //   top: 250px;
+    //   transform: scale(0.8);
+    // }
   }
 
   @media (min-width: 376px) and (max-width: 424px) {
-    &__visible {
-      top: 190px;
-      transform: scale(0.8);
-    }
+    // &__visible {
+    //   top: 190px;
+    //   transform: scale(0.8);
+    // }
   }
 
   @media (min-width: 768px) {
-    &__visible {
-      transform: scale(0.7);
-      top: 120px;
-    }
+    // &__visible {
+    //   transform: scale(0.7);
+    //   top: 120px;
+    // }
 
     &__title {
       font-size: 20px;
@@ -154,11 +159,11 @@
       cursor: pointer;
     }
 
-    &__visible {
-      top: 60px;
-      left: 1%;
-      transform: scale(0.5);
-    }
+    // &__visible {
+    //   top: 60px;
+    //   left: 1%;
+    //   transform: scale(0.5);
+    // }
 
     &__description {
       font-size: 18px;
@@ -174,9 +179,9 @@
   }
 
   @media (min-width: 1440px) {
-    &__visible {
-      transform: scale(0.5);
-    }
+    // &__visible {
+    //   transform: scale(0.5);
+    // }
 
     &__info {
       max-width: 70%;

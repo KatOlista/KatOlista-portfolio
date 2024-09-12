@@ -13,18 +13,18 @@ type Props = {
 };
 
 export const ProjectItem: React.FC<Props> = ({ project }) => {
-  const link = document.createElement('a');
-  link.href = project.demo;
-  link.target = '_blank';
+  // const link = document.createElement('a');
+  // link.href = project.demo;
+  // link.target = '_blank';
 
   const showDescriptionHandler = () => {
     const currentItem = document.querySelector(`#item-${project.id}`);
 
     currentItem?.classList.add(`${styles.project__current}`);
 
-    link.classList.add(`${styles.project__link}`);
+    // link.classList.add(`${styles.project__link}`);
 
-    currentItem?.append(link);
+    // currentItem?.append(link);
 
     document.body.classList.add('noscroll');
 
@@ -78,6 +78,14 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
             {project.description}
           </div>
         </div>
+
+        <a target="_blanc" href={project.demo} className={styles.project__link}>
+          <img
+            className={styles.project__img}
+            src={project.image}
+            alt={project.title}
+          />
+        </a>
 
         <div className={styles.project__info}>
           {project.technologies}
