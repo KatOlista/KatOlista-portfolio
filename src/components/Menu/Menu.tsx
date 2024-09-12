@@ -14,6 +14,7 @@ type Props = {
 export const Menu: React.FC<Props> = ({ setIsMenuOpen }) => {
   const closeMenuHandler = () => {
     document.querySelector('#menu')?.classList.remove('menu-active');
+    document.body.classList.remove('noscroll');
 
     setTimeout(() => {
       setIsMenuOpen(false);
