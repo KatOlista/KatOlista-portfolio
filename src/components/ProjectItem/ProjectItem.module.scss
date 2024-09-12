@@ -113,9 +113,17 @@
     top: 25%;
   }
 
-  @media (max-width: 374px) {
+  @media (max-width: 375px) {
     &__visible {
       top: 250px;
+      transform: scale(0.8);
+    }
+  }
+
+  @media (min-width: 376px) and (max-width: 424px) {
+    &__visible {
+      top: 190px;
+      transform: scale(0.8);
     }
   }
 
