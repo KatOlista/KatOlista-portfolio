@@ -26,18 +26,21 @@ export const Menu: React.FC<Props> = ({ setIsMenuOpen }) => {
   useClickOutside(menuRef, closeMenuHandler);
 
   return (
-    <ul ref={menuRef} id="menu" className={styles.menu}>
-      {menuList.map((menuItem: string) => (
-        <li className={styles.menu__li} key={menuItem}>
-          <a
-            onClick={closeMenuHandler}
-            className={styles.menu__link}
-            href={`#${menuItem}`}
-          >
-            {menuItem} <Arrow />
-          </a>
-        </li>
-      ))}
-    </ul>
+    <aside id="menu" className={styles.menu__wrapper}>
+      <ul ref={menuRef} className={styles.menu}>
+        {menuList.map((menuItem: string) => (
+          <li className={styles.menu__li} key={menuItem}>
+            <a
+              onClick={closeMenuHandler}
+              className={styles.menu__link}
+              href={`#${menuItem}`}
+            >
+              {menuItem} <Arrow />
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className={styles.menu__layout}></div>
+    </aside>
   );
 };
