@@ -106,14 +106,6 @@ import Mail from '../assets/icons/mail.svg?react';
 
 export const contacts = [
   {
-    id: 'phone',
-    target: '_self',
-    title: '+48533076993',
-    icon: Phone,
-    link: 'tel: +48533076993',
-    info: '+48533076993',
-  },
-  {
     id: 'linkedin',
     target: '_blanc',
     title: 'LinkedIn',
@@ -136,6 +128,14 @@ export const contacts = [
     icon: Telegram,
     link: 'https://t.me/KatOlista',
     info: '',
+  },
+  {
+    id: 'phone',
+    target: '_self',
+    title: '+48533076993',
+    icon: Phone,
+    link: 'tel: +48533076993',
+    info: '+48533076993',
   },
   {
     id: 'email',
