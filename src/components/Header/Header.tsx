@@ -37,8 +37,8 @@ export const Header = () => {
   };
 
   return (
-    <section className="container">
-      <div className={styles.header}>
+    <>
+      <header className={styles.header}>
         <a id="name" href="./" className={styles.header__name}>
           KatOlista
         </a>
@@ -63,9 +63,9 @@ export const Header = () => {
 
           <Navigation />
         </div>
-      </div>
+      </header>
 
       {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
-    </section>
+    </>
   );
 };
