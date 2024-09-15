@@ -40,11 +40,11 @@
   }
 
   &__1 {
-    background-color: #ebf48d;
+    background-color: #edfffc;
   }
 
   &__2 {
-    background-color: #f79bca;
+    background-color: #c0fff8;
   }
 
   &__3 {
@@ -52,19 +52,19 @@
   }
 
   &__4 {
-    background-color: #99efc3;
+    background-color: #00e2c8;
   }
 
   &__5 {
-    background-color: #8bb9f9;
+    background-color: #3affee;
   }
 
   &__6 {
-    background-color: #c791fa;
+    background-color: #81fff3;
   }
 
   &__info {
-    padding-top: 25px;
+    padding-top: 40px;
     position: relative;
     font-size: 26px;
     line-height: 110%;
@@ -74,7 +74,6 @@
     display: inline-block;
     position: relative;
     letter-spacing: 0.1em;
-    font-weight: 600;
     animation: move 3s infinite;
     transition: transform 0.3s ease;
   }
@@ -82,19 +81,6 @@
   &__in {
     width: 20px;
     height: 20px;
-  }
-
-  &__scroll {
-    padding-top: 40px;
-    display: inline-block;
-    text-align: center;
-    border-bottom: 2px solid var(--textColorAccent);
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: var(--textColorAccent);
-
-    transition: transform 0.3s ease;
   }
 
   &__scroll:active {

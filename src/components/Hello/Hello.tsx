@@ -63,12 +63,8 @@ export const Hello = () => {
             <LinkedIn className={styles.hello__in} />.
           </a>
           <br />
-          Welcome to my PORTFOLIO!
+          Welcome to my portfolio!
         </div>
-
-        <a className={styles.hello__scroll} href="#About">
-          Scroll for more
-        </a>
       </div>
     </section>
   );

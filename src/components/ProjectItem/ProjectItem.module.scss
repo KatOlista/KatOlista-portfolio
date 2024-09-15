@@ -145,17 +145,11 @@
     }
 
     &__info {
-      max-width: 90%;
+      max-width: 800px;
     }
 
     &__button:hover {
       transform: scale(0.95);
-    }
-  }
-
-  @media (min-width: 1440px) {
-    &__info {
-      max-width: 70%;
     }
   }
 }

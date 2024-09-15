@@ -3,7 +3,8 @@ import { jsPDF } from 'jspdf';
 
 import styles from './About.module.scss';
 
-import pixeledPhoto from '../../assets/images/pixeled.webp';
+// import pixeledPhoto from '../../assets/images/pixeled.webp';
+import photo from '../../assets/images/original.png';
 import { Button, Title } from '../';
 
 export const About = () => {
@@ -35,24 +36,6 @@ export const About = () => {
       ?.classList.remove(`${styles['about__remove-background']}`);
   };
 
-  const handleExportPageAsImg = () => {
-    const capturedElement = document.getElementById('root') as HTMLElement;
-    removeEffects();
-
-    html2canvas(capturedElement)?.then((canvas) => {
-      const fileName = 'Katiushyna_portfolio_page.png';
-      const href = canvas.toDataURL('image/png');
-      const element = document.createElement('a');
-      element.href = href;
-      element.download = fileName;
-      document.body.appendChild(element);
-      element.click();
-
-      document.body.removeChild(element);
-      returnEffects();
-    });
-  };
-
   const handleExportPageAsPDF = () => {
     const capturedElement = document.getElementById('root') as HTMLElement;
     removeEffects();
@@ -80,7 +63,7 @@ export const About = () => {
           <div className={styles.about__photo}>
             <img
               className={styles.about__img}
-              src={pixeledPhoto}
+              src={photo}
               alt="my photo"
             />
           </div>
@@ -110,10 +93,6 @@ export const About = () => {
               >
                 <span className={styles.about__cv}>view resume</span>
               </a>
-
-              <Button onClick={handleExportPageAsImg}>
-                <span className={styles.about__cv}>Download page as png</span>
-              </Button>
 
               <Button onClick={handleExportPageAsPDF}>
                 <span className={styles.about__cv}>Download page as PDF</span>
