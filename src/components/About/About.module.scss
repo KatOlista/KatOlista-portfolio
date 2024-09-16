@@ -28,6 +28,8 @@
   }
 
   &__buttons {
+    margin: 0 auto;
+    max-width: 500px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;

@@ -3,7 +3,6 @@ import { jsPDF } from 'jspdf';
 
 import styles from './About.module.scss';
 
-// import pixeledPhoto from '../../assets/images/pixeled.webp';
 import photo from '../../assets/images/original.png';
 import { Button, Title } from '../';
 
