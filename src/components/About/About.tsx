@@ -60,11 +60,7 @@ export const About = () => {
 
         <div className={styles.about__content}>
           <div className={styles.about__photo}>
-            <img
-              className={styles.about__img}
-              src={photo}
-              alt="my photo"
-            />
+            <img className={styles.about__img} src={photo} alt="my photo" />
           </div>
 
           <div className={styles.about__info}>

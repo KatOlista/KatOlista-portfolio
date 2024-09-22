@@ -28,13 +28,11 @@
   }
 
   &__buttons {
-    margin: 0 auto;
     max-width: 500px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
 
   &__link {
@@ -84,7 +82,6 @@
 
     &__buttons {
       flex-direction: row;
-      justify-content: space-between;
     }
   }
 
@@ -94,7 +91,8 @@
     }
 
     &__img {
-      filter: grayscale(1) sepia(0.4) saturate(0.5) contrast(0.6) brightness(0.8);
+      filter: grayscale(1) sepia(0.4) saturate(0.5) contrast(0.6)
+        brightness(0.8);
 
       &:hover {
         filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
