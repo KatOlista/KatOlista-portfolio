@@ -107,6 +107,10 @@
     max-height: 50vh;
   }
 
+  &__index {
+    position: static;
+  }
+
   @media (min-width: 768px) {
     &__link {
       max-width: 80%;

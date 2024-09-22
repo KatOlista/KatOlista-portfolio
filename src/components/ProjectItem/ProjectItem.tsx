@@ -16,6 +16,8 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
   const showDescriptionHandler = () => {
     const currentItem = document.querySelector(`#item-${project.id}`);
 
+    document.getElementById('Projects')?.classList.add(`${styles.project__index}`);
+
     currentItem?.classList.add(`${styles.project__current}`);
 
     document.body.classList.add('noscroll');
@@ -25,6 +27,8 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
     document
       .querySelector(`#item-${project.id}`)
       ?.classList.remove(`${styles.project__current}`);
+
+      document.getElementById('Projects')?.classList.remove(`${styles.project__index}`);;
 
     document.body.classList.remove('noscroll');
   };

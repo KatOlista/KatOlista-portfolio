@@ -1,4 +1,7 @@
 .projects {
+  position: relative;
+  z-index: 1;
+
   @media (min-width: 990px) {
     &__list {
       display: grid;
