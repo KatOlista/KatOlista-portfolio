@@ -90,13 +90,13 @@
       transform: scale(0.95);
     }
 
-    &__img {
-      filter: grayscale(1) sepia(0.4) saturate(0.5) contrast(0.6)
-        brightness(0.8);
+    // &__img {
+    //   filter: grayscale(1) sepia(0.4) saturate(0.5) contrast(0.6)
+    //     brightness(0.8);
 
-      &:hover {
-        filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
-      }
-    }
+    //   &:hover {
+    //     filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
+    //   }
+    // }
   }
 }

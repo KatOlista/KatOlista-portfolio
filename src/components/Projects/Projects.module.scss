@@ -1,9 +1,9 @@
 .projects {
   @media (min-width: 990px) {
     &__list {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 50px;
-      flex-wrap: wrap;
     }
   }
 }

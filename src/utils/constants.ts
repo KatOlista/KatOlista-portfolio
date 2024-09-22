@@ -96,6 +96,15 @@ export const projects: Project[] = [
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
+  {
+    id: 7,
+    title: 'Currency converter',
+    image: Respirator,
+    demo: 'katolista.github.io/currency-exchange/',
+    code: 'https://github.com/KatOlista/currency-exchange',
+    technologies: 'Used technologies: ReactJS, Redux Toolkit, JavaScript, HTML5, and SASS.',
+    description: 'is a simple web application that allows you to convert currency at the NBU rate.'
+  }
 ];
 
 import Phone from '../assets/icons/phone.svg?react';
