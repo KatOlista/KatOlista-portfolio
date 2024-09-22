@@ -77,16 +77,6 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: 'Respirators',
-    image: Respirator,
-    demo: 'https://katolista.github.io/respirators/',
-    code: 'https://github.com/KatOlista/respirators',
-    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
-    description:
-      'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
-  },
-  {
-    id: 6,
     title: 'HomeTextile',
     image: HomeTextile,
     demo: 'https://katolista.github.io/home-textile/',
@@ -95,6 +85,16 @@ export const projects: Project[] = [
       'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
     description:
       'is a single-page website that extracts dynamic content from Headless CMS Sanity.',
+      },
+  {
+    id: 6,
+    title: 'Respirators',
+    image: Respirator,
+    demo: 'https://katolista.github.io/respirators/',
+    code: 'https://github.com/KatOlista/respirators',
+    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
+    description:
+      'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
 ];
 
