@@ -4,6 +4,7 @@ import BlueHouse from '../assets/images/blue-house.png';
 import Respirator from '../assets/images/respirator.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
 import HomeTextile from '../assets/images/home-textile.png';
+import CurrencyConverter from '../assets/images/currency-converter.png';
 
 import { Project } from '../types';
 
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     demo: 'https://bluehouse.is/',
     code: '',
     technologies:
-      'Used technologies: React, JavaScript, CSS, styled components, Swiper',
+      'Used technologies: React, JavaScript, CSS, Styled Components, Swiper, and HTML5',
     description:
       'is a website of Reykjavik hotel Blue House Bed and Breakfast. It is at the end of the rebranding process. The mobile and tablet versions of the site have been added.',
   },
@@ -50,7 +51,7 @@ export const projects: Project[] = [
     demo: 'https://fe-jul23-team6.github.io/product_catalog/',
     code: 'https://github.com/fe-jul23-team6/product_catalog',
     technologies:
-      'Used technologies: React, TypeScript, Express + Sequelize and Node.js.',
+      'Used technologies: React, TypeScript, SASS, HTML5, Express + Sequelize and Node.js.',
     description:
       'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.',
   },
@@ -61,7 +62,7 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/todo-list-with-redux/',
     code: 'https://github.com/KatOlista/todo-list-with-redux',
     technologies:
-      'Used technologies: Redux Toolkit, React, Vite, TypeScript, and JSS.',
+      'Used technologies: React, Redux Toolkit, TypeScript, Vite, HTML5 and JSS.',
     description:
       'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },
@@ -82,29 +83,31 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/home-textile/',
     code: 'https://github.com/KatOlista/home-textile',
     technologies:
-      'Used technologies: React, Vite, SASS, Swiper, Vite plugin SVGR, SANITY',
+      'Used technologies: React, Vite, JavaScript, SASS, Swiper, Vite plugin SVGR, and SANITY',
     description:
       'is a single-page website that extracts dynamic content from Headless CMS Sanity.',
-      },
+  },
   {
     id: 6,
     title: 'Respirators',
     image: Respirator,
     demo: 'https://katolista.github.io/respirators/',
     code: 'https://github.com/KatOlista/respirators',
-    technologies: 'Used technologies: Gulp, HTML5, and SASS.',
+    technologies: 'Used technologies: Gulp, JavaScript, HTML5, and SASS.',
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
   },
   {
     id: 7,
     title: 'Currency converter',
-    image: Respirator,
+    image: CurrencyConverter,
     demo: 'katolista.github.io/currency-exchange/',
     code: 'https://github.com/KatOlista/currency-exchange',
-    technologies: 'Used technologies: ReactJS, Redux Toolkit, JavaScript, HTML5, and SASS.',
-    description: 'is a simple web application that allows you to convert currency at the NBU rate.'
-  }
+    technologies:
+      'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, HTML5, and SASS.',
+    description:
+      'is a simple web application that allows you to convert currency at the NBU rate.',
+  },
 ];
 
 import Phone from '../assets/icons/phone.svg?react';

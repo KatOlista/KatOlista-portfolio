@@ -3,22 +3,19 @@
 
   &::before {
     content: '';
-    border-radius: 35% 48% 109% 47%;
     position: absolute;
     display: block;
+    left: -210%;
+    top: 25%;
     width: 881px;
     height: 415px;
+    border-radius: 35% 48% 109% 47%;
     background: linear-gradient(
       180deg,
       rgba(3, 255, 224, 1),
       rgba(5, 165, 255, 1)
     );
     filter: blur(70px) opacity(50%);
-  }
-
-  &::before {
-    left: -210%;
-    top: 25%;
   }
 
   &__list {

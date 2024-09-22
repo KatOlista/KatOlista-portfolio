@@ -8,10 +8,8 @@
   gap: 20px;
 
   &__wrapper {
-    position: relative;
     opacity: 1;
     filter: grayscale(1) sepia(0.4) saturate(0.5) contrast(0.6) brightness(0.8);
-    top: auto;
 
     transition:
       opacity 0.3s ease,
@@ -125,8 +123,6 @@
   }
 
   @media (min-width: 990px) {
-    flex: 45%;
-
     &__link {
       margin-left: 50px;
     }
