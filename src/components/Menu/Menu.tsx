@@ -12,7 +12,11 @@ type Props = {
 };
 
 export const Menu: React.FC<Props> = ({ setIsMenuOpen }) => {
-  const closeMenuHandler = () => {
+  const closeMenuHandler = (id?: string) => {
+    if (id) {
+      document.querySelector(id)?.scrollIntoView(true);
+    }
+
     document.querySelector('#menu')?.classList.remove('menu-active');
     document.body.classList.remove('noscroll');
 
@@ -29,14 +33,12 @@ export const Menu: React.FC<Props> = ({ setIsMenuOpen }) => {
     <aside id="menu" className={styles.menu__wrapper}>
       <ul ref={menuRef} className={styles.menu}>
         {menuList.map((menuItem: string) => (
-          <li className={styles.menu__li} key={menuItem}>
-            <a
-              onClick={closeMenuHandler}
-              className={styles.menu__link}
-              href={`#${menuItem}`}
-            >
-              {menuItem} <Arrow />
-            </a>
+          <li
+            onClick={() => closeMenuHandler(`#${menuItem}`)}
+            className={styles.menu__li}
+            key={menuItem}
+          >
+            {menuItem} <Arrow />
           </li>
         ))}
       </ul>

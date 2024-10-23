@@ -3,14 +3,20 @@ import styles from './Navigation.module.scss';
 import { menuList } from '../../utils';
 
 export const Navigation = () => {
+  const scrollTo = (id: string) => {
+    document.querySelector(id)?.scrollIntoView(true);
+  };
+
   return (
     <nav className={styles.navigation}>
       <ul className={styles.navigation__list}>
         {menuList.map((menuItem: string) => (
-          <li className={styles.navigation__li} key={menuItem}>
-            <a className={styles.navigation__link} href={`#${menuItem}`}>
-              {menuItem}
-            </a>
+          <li
+            key={menuItem}
+            className={styles.navigation__li}
+            onClick={() => scrollTo(`#${menuItem}`)}
+          >
+            {menuItem}
           </li>
         ))}
       </ul>

@@ -25,38 +25,10 @@
 
   &__li {
     position: relative;
-    padding-inline: 20px;
-  }
-
-  &__link {
-    padding-block: 22px;
+    padding: 22px 20px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #f5fffe66;
-
-    transition: background-color 0.3s ease;
-  }
-
-  &__li::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    inset: 0 0 0 0;
-    background: var(--textColorAccent);
-    opacity: 0.4;
-    z-index: -1;
-    transition: transform 0.3s ease;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-
-  &__li:active::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
   }
 
   @media (min-width: 768px) {
