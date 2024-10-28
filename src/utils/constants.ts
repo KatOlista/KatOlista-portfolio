@@ -101,7 +101,7 @@ export const projects: Project[] = [
     id: 7,
     title: 'Currency converter',
     image: CurrencyConverter,
-    demo: 'katolista.github.io/currency-exchange/',
+    demo: 'https://katolista.github.io/currency-exchange/',
     code: 'https://github.com/KatOlista/currency-exchange',
     technologies:
       'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, HTML5, and SASS.',
