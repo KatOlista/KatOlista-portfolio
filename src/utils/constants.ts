@@ -1,9 +1,9 @@
-import Nothing from '../assets/images/nothing.png';
-import TaskFlow from '../assets/images/task-flow.png';
-import BlueHouse from '../assets/images/blue-house.png';
-import Respirator from '../assets/images/respirator.png';
-import NiceGadgets from '../assets/images/nice-gadgets.png';
-import HomeTextile from '../assets/images/home-textile.png';
+import Nothing from '../assets/images/nothing.webp';
+import TaskFlow from '../assets/images/task-flow.webp';
+import BlueHouse from '../assets/images/blue-house.webp';
+import Respirator from '../assets/images/respirator.webp';
+import NiceGadgets from '../assets/images/nice-gadgets.webp';
+import HomeTextile from '../assets/images/home-textile.webp';
 import CurrencyConverter from '../assets/images/currency-converter.webp';
 
 import { Project } from '../types';
