@@ -4,7 +4,7 @@ import BlueHouse from '../assets/images/blue-house.png';
 import Respirator from '../assets/images/respirator.png';
 import NiceGadgets from '../assets/images/nice-gadgets.png';
 import HomeTextile from '../assets/images/home-textile.png';
-import CurrencyConverter from '../assets/images/currency-converter.png';
+import CurrencyConverter from '../assets/images/currency-converter.webp';
 
 import { Project } from '../types';
 
@@ -101,8 +101,8 @@ export const projects: Project[] = [
     id: 7,
     title: 'Currency converter',
     image: CurrencyConverter,
-    demo: 'https://katolista.github.io/currency-exchange/',
-    code: 'https://github.com/KatOlista/currency-exchange',
+    demo: 'https://katolista.github.io/convertor-animated/',
+    code: 'https://github.com/KatOlista/convertor-animated',
     technologies:
       'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, HTML5, and SASS.',
     description:
