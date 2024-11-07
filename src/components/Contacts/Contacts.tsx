@@ -15,8 +15,8 @@ export const Contacts = () => {
       .from(`.${styles.contacts}`, {
         scrollTrigger: {
           trigger: `.${styles.contacts}`,
-          start: 'top 80%',
-          end: '20%',
+          start: '-20% 80%',
+          end: '0%',
           scrub: 1,
         },
         opacity: 0,
