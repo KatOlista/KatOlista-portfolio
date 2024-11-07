@@ -30,6 +30,7 @@ export const skills = [
   'NPM',
   'VS Code',
   'FETCH',
+  'Open Graph',
 ];
 
 export const projects: Project[] = [
@@ -62,7 +63,7 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/convertor-animated/',
     code: 'https://github.com/KatOlista/convertor-animated',
     technologies:
-      'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, GSAP, HTML5, and SASS.',
+      'Used technologies: React, Redux Toolkit, JavaScript, FETCH, Vite, Vite plugin SVGR, GSAP, HTML5, SASS, and Open Graph.',
     description:
       'is a simple web application that allows you to convert currency at the NBU rate.',
   },
@@ -73,7 +74,7 @@ export const projects: Project[] = [
     demo: 'https://katolista.github.io/todo-list-with-redux/',
     code: 'https://github.com/KatOlista/todo-list-with-redux',
     technologies:
-      'Used technologies: React, Redux Toolkit, TypeScript, Vite, GSAP, HTML5 and JSS.',
+      'Used technologies: React, Redux Toolkit, TypeScript, Vite, GSAP, HTML5, JSS, and Open Graph.',
     description:
       'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },

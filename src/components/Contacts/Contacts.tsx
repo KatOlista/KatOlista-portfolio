@@ -20,7 +20,7 @@ export const Contacts = () => {
           scrub: 1,
         },
         opacity: 0,
-        y: '10%',
+        y: '25%',
         delay: 1,
         duration: 1,
       })
