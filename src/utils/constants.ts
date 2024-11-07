@@ -13,10 +13,13 @@ export const menuList = ['About', 'Projects', 'Contacts'];
 export const skills = [
   'React',
   'Redux Toolkit',
+  'Zustand',
   'JavaScript',
   'TypeScript',
   'SASS',
   'CSS3',
+  'JSS',
+  'GSAP',
   'HTML5',
   'Git',
   'Github',
@@ -27,9 +30,6 @@ export const skills = [
   'NPM',
   'VS Code',
   'FETCH',
-  'ClickUp',
-  'Bitrix',
-  'Trello',
 ];
 
 export const projects: Project[] = [
@@ -56,13 +56,24 @@ export const projects: Project[] = [
       'is a user-friendly platform where customers could explore and purchase a wide range of Apple products, including smartphones, tablets, and watches.',
   },
   {
+    id: 7,
+    title: 'Currency converter',
+    image: CurrencyConverter,
+    demo: 'https://katolista.github.io/convertor-animated/',
+    code: 'https://github.com/KatOlista/convertor-animated',
+    technologies:
+      'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, GSAP, HTML5, and SASS.',
+    description:
+      'is a simple web application that allows you to convert currency at the NBU rate.',
+  },
+  {
     id: 3,
     title: 'TaskFlow',
     image: TaskFlow,
     demo: 'https://katolista.github.io/todo-list-with-redux/',
     code: 'https://github.com/KatOlista/todo-list-with-redux',
     technologies:
-      'Used technologies: React, Redux Toolkit, TypeScript, Vite, HTML5 and JSS.',
+      'Used technologies: React, Redux Toolkit, TypeScript, Vite, GSAP, HTML5 and JSS.',
     description:
       'is a simple web application that allows to create and download your daily tasks to avoid missing anything.',
   },
@@ -96,17 +107,6 @@ export const projects: Project[] = [
     technologies: 'Used technologies: Gulp, JavaScript, HTML5, and SASS.',
     description:
       'is a landing page. It was built using responsive design principles, ensuring a smooth and visually pleasing experience across various devices, from desktops to mobile.',
-  },
-  {
-    id: 7,
-    title: 'Currency converter',
-    image: CurrencyConverter,
-    demo: 'https://katolista.github.io/convertor-animated/',
-    code: 'https://github.com/KatOlista/convertor-animated',
-    technologies:
-      'Used technologies: React, Redux Toolkit, JavaScript, Vite, Vite plugin SVGR, HTML5, and SASS.',
-    description:
-      'is a simple web application that allows you to convert currency at the NBU rate.',
   },
 ];
 

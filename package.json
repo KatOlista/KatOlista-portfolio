@@ -17,6 +17,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "gsap": "^3.12.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "react": "^18.3.1",

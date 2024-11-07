@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import gsap from 'gsap';
 import cn from 'classnames';
+import { useState } from 'react';
+import { useGSAP } from '@gsap/react';
 
 import { Button, Menu, Navigation } from '../';
 
@@ -9,6 +11,19 @@ import BurgerMenuIcon from '../../assets/icons/burger-menu.svg?react';
 import CloseIcon from '../../assets/icons/close.svg?react';
 
 export const Header = () => {
+  gsap.registerPlugin(useGSAP);
+
+  useGSAP(() => {
+    gsap
+      .timeline()
+      .from(`.${styles.header}`, {
+        opacity: 0,
+        y: '-150%',
+        delay: 0.5,
+        duration: 1,
+      });
+  });
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenuHandler = (
