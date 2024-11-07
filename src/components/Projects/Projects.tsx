@@ -16,7 +16,7 @@ export const Projects = () => {
         scrollTrigger: {
           trigger: `.${styles.projects}`,
           start: 'top 80%',
-          end: '20%',
+          end: '5%',
           scrub: 1,
         },
         opacity: 0,
