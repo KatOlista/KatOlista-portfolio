@@ -1,7 +1,7 @@
 type Props = {
   children: string | React.ReactNode;
   buttonClassName?: string;
-  onClick: (
+  onClick?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
   ) => void;
 };

@@ -14,14 +14,12 @@ export const Header = () => {
   gsap.registerPlugin(useGSAP);
 
   useGSAP(() => {
-    gsap
-      .timeline()
-      .from(`.${styles.header}`, {
-        opacity: 0,
-        y: '-150%',
-        delay: 0.5,
-        duration: 1,
-      });
+    gsap.timeline().from(`.${styles.header}`, {
+      opacity: 0,
+      y: '-150%',
+      delay: 0.5,
+      duration: 1,
+    });
   });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

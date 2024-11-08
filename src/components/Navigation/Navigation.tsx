@@ -1,3 +1,5 @@
+import { Button } from '../';
+
 import styles from './Navigation.module.scss';
 
 import { menuList } from '../../utils';
@@ -16,7 +18,10 @@ export const Navigation = () => {
             className={styles.navigation__li}
             onClick={() => scrollTo(`#${menuItem}`)}
           >
-            {menuItem}
+            <Button>
+              {menuItem}
+            </Button>
+            {/* {menuItem} */}
           </li>
         ))}
       </ul>

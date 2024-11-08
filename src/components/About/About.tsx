@@ -2,7 +2,7 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import styles from './About.module.scss';
 
@@ -13,20 +13,19 @@ export const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.timeline()
-      .from(`.${styles.about}`, {
-        scrollTrigger: {
-          trigger: `.${styles.about}`,
-          start: 'top 80%',
-          end: '20%',
-          scrub: 1,
-        },
-        opacity: 0,
-        y: '20%',
-        delay: 1,
-        duration: 1,
-      })
+    gsap.timeline().from(`.${styles.about}`, {
+      scrollTrigger: {
+        trigger: `.${styles.about}`,
+        start: 'top 80%',
+        end: '20%',
+        scrub: 1,
+      },
+      opacity: 0,
+      y: '20%',
+      delay: 1,
+      duration: 1,
     });
+  });
 
   const removeEffects = () => {
     const hello = document.getElementById('hello');
