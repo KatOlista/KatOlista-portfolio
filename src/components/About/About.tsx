@@ -104,7 +104,7 @@ export const About = () => {
               <a
                 className={styles.about__link}
                 target="_blank"
-                href="https://drive.google.com/file/d/17XU08A60KDu0SsfEIxJrwH9lg6E5_WbU/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qr3WtVQ442CHLtU96LunkqP9CnhSiklM/view?usp=sharing"
               >
                 <span className={styles.about__cv}>view resume</span>
               </a>
