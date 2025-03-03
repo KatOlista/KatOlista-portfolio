@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import styles from './About.module.scss';
 
-import photo from '../../assets/images/original.png';
+import photo from '../../assets/images/photo.webp';
 import { Button, Title } from '../';
 
 export const About = () => {

@@ -18,9 +18,7 @@ export const Navigation = () => {
             className={styles.navigation__li}
             onClick={() => scrollTo(`#${menuItem}`)}
           >
-            <Button>
-              {menuItem}
-            </Button>
+            <Button>{menuItem}</Button>
             {/* {menuItem} */}
           </li>
         ))}
