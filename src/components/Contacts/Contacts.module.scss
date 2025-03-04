@@ -12,8 +12,8 @@
     border-radius: 35% 48% 109% 47%;
     background: linear-gradient(
       180deg,
-      rgba(3, 255, 224, 1),
-      rgba(5, 165, 255, 1)
+      var(--textColorAccent),
+      var(--backgroundColor-plashka1)
     );
     filter: blur(70px) opacity(50%);
   }

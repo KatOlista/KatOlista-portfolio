@@ -15,6 +15,11 @@
   @media (min-width: 990px) {
     display: block;
 
+    &__button {
+      padding: 10px;
+      border-radius: 20px;
+    }
+
     &__li:hover {
       background: linear-gradient(
         90deg,

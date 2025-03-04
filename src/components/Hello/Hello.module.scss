@@ -13,8 +13,8 @@
     height: 264px;
     background: linear-gradient(
       180deg,
-      rgba(3, 255, 224, 1),
-      rgba(5, 165, 255, 1)
+      var(--textColorAccent),
+      var(--backgroundColor-plashka1)
     );
     filter: blur(70px) opacity(50%);
   }
@@ -40,27 +40,27 @@
   }
 
   &__1 {
-    background-color: #edfffc;
+    background-color: var(--backgroundColor-plashka1);
   }
 
   &__2 {
-    background-color: #c0fff8;
+    background-color: var(--backgroundColor-plashka2);
   }
 
   &__3 {
-    background-color: #6efefe;
+    background-color: var(--backgroundColor-plashka3);
   }
 
   &__4 {
-    background-color: #00e2c8;
+    background-color: var(--backgroundColor-plashka4);
   }
 
   &__5 {
-    background-color: #3affee;
+    background-color: var(--backgroundColor-plashka5);
   }
 
   &__6 {
-    background-color: #81fff3;
+    background-color: var(--backgroundColor-plashka6);
   }
 
   &__info {

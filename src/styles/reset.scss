@@ -56,17 +56,6 @@ button:focus-visible {
   border: none;
 }
 
-button {
-  background-color: transparent;
-  border: 1px solid transparent;
-  font-family: inherit;
-  color: inherit;
-
-  @media (min-width: 990px) {
-    cursor: pointer;
-  }
-}
-
 image {
   display: block;
   max-width: 100%;

@@ -39,18 +39,19 @@ export const ProjectItem: React.FC<Props> = ({ project }) => {
 
   return (
     <li id={`li-${project.id}`} className={styles.project}>
-      <div className={styles.project__wrapper}>
+      {/* <div className={styles.project__wrapper}> */}
+      <Button label="project item" buttonClassName={styles.project__wrapper}>
         <img
           className={styles.project__image}
           src={project.image}
           alt={project.title}
           onClick={showDescriptionHandler}
         />
-      </div>
+      </Button>
 
       <div id={`item-${project.id}`} className={styles.project__description}>
         <div>
-          <Button onClick={closeDescriptionHandler}>
+          <Button label="back" onClick={closeDescriptionHandler}>
             <Back className={styles.project__back} />
           </Button>
 

@@ -18,8 +18,12 @@ export const Navigation = () => {
             className={styles.navigation__li}
             onClick={() => scrollTo(`#${menuItem}`)}
           >
-            <Button>{menuItem}</Button>
-            {/* {menuItem} */}
+            <Button
+              buttonClassName={styles.navigation__button}
+              label={menuItem}
+            >
+              {menuItem}
+            </Button>
           </li>
         ))}
       </ul>

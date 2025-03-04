@@ -109,7 +109,10 @@ export const About = () => {
                 <span className={styles.about__cv}>view resume</span>
               </a>
 
-              <Button onClick={handleExportPageAsPDF}>
+              <Button
+                label="Download page as PDF"
+                onClick={handleExportPageAsPDF}
+              >
                 <span className={styles.about__cv}>Download page as PDF</span>
               </Button>
             </div>

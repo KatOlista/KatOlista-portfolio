@@ -59,6 +59,7 @@ export const Header = () => {
         <div className={styles.header__menu}>
           <Button
             buttonClassName={styles.header__button}
+            label="show-hide menu"
             onClick={toggleMenuHandler}
           >
             <BurgerMenuIcon

@@ -1,5 +1,6 @@
 type Props = {
   children: string | React.ReactNode;
+  label: string;
   buttonClassName?: string;
   onClick?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
@@ -19,14 +20,18 @@ const buttonStyle: React.CSSProperties = {
 export const Button: React.FC<Props> = ({
   children,
   buttonClassName,
+  label,
   onClick,
 }) => {
+  const style = window.innerWidth < 990 ? buttonStyle : {};
+
   return (
     <button
       type="button"
       onClick={onClick}
-      style={buttonStyle}
+      style={style}
       className={buttonClassName}
+      aria-label={label}
     >
       {children}
     </button>
