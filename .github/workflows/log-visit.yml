@@ -13,14 +13,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Загружаем всю историю коммитов, чтобы избежать проблем с pull
 
       - name: Set up GitHub Actions permissions
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Authenticate with GitHub Token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
       - name: Pull latest changes to avoid conflicts
-        run: git pull --rebase origin main
+        run: |
+          git pull --rebase origin main || (git fetch --all && git reset --hard origin/main)
 
       - name: Save visitor data
         run: |
