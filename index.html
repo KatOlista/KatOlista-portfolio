@@ -81,19 +81,7 @@
         }
       }
 
-      async function loadVisits() {
-        try {
-          const response = await fetch("https://raw.githubusercontent.com/KatOlista/KatOlista-portfolio/main/visitors.json");
-          const visits = await response.json();
-          document.getElementById("visit-count").innerText = `Total visits: ${visits.length}`;
-        } catch (error) {
-          document.getElementById("visit-count").innerText = "Could not load visits.";
-          console.error("Error loading visits:", error);
-        }
-      }
-
       logVisit();
-      loadVisits();
     </script>
   </body>
 </html>
