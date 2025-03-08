@@ -1,3 +1,53 @@
+# name: Log Visitor Data from Web
+
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       visit:
+#         description: "Visitor data"
+#         required: true
+
+# jobs:
+#   log_visitor:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0  # Ensure full history to prevent conflicts
+
+#       - name: Set up GitHub Actions user
+#         run: |
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+#       - name: Authenticate with GitHub Token
+#         run: |
+#           git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}
+
+#       - name: Pull latest changes
+#         run: git pull --rebase
+
+#       - name: Save visitor data
+#         run: |
+#           VISIT_DATA='${{ inputs.visit }}'
+
+#           # Ensure visitors.json exists
+#           if [ ! -f visitors.json ]; then
+#             echo "[]" > visitors.json
+#           fi
+
+#           # Append new visit to visitors.json
+#           jq --argjson visit "$VISIT_DATA" '. + [$visit]' visitors.json > temp.json && mv temp.json visitors.json
+
+#       - name: Commit and Push
+#         run: |
+#           git add visitors.json
+#           git commit -m "New visitor log" || echo "No changes to commit"
+#           git push origin main
+
+
+
 name: Log Visitor Data from Web
 
 on:
@@ -13,8 +63,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Ensure full history to prevent conflicts
 
       - name: Set up GitHub Actions user
         run: |
@@ -25,19 +73,14 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}
 
-      - name: Pull latest changes
-        run: git pull --rebase
-
       - name: Save visitor data
         run: |
           VISIT_DATA='${{ inputs.visit }}'
 
-          # Ensure visitors.json exists
           if [ ! -f visitors.json ]; then
             echo "[]" > visitors.json
           fi
 
-          # Append new visit to visitors.json
           jq --argjson visit "$VISIT_DATA" '. + [$visit]' visitors.json > temp.json && mv temp.json visitors.json
 
       - name: Commit and Push
