@@ -14,9 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Загружаем всю историю коммитов
+          fetch-depth: 0  # Загружаем всю историю коммитов, чтобы избежать проблем с pull
 
-      - name: Set up GitHub Actions user
+      - name: Set up GitHub Actions permissions
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -27,8 +27,7 @@ jobs:
 
       - name: Pull latest changes to avoid conflicts
         run: |
-          git fetch origin main
-          git reset --hard origin/main  # Обновляем локальную копию, удаляя конфликты
+          git pull --rebase origin main || (git fetch --all && git reset --hard origin/main)
 
 
       - name: Save visitor data
@@ -46,5 +45,4 @@ jobs:
       - name: Commit and Push
         run: |
           git add visitors.json
-          git commit -m "New visitor log"
-          git push --force origin main  # Используем --force для обхода ошибки
+          git diff --staged --quiet || (git commit -m "New visitor log" && git push origin main)
