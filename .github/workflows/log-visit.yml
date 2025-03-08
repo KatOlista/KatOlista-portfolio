@@ -30,9 +30,18 @@ jobs:
           git fetch origin main
           git reset --hard origin/main  # Обновляем локальную копию, удаляя конфликты
 
+
       - name: Save visitor data
         run: |
-          echo '${{ inputs.visit }}' >> visitors.json
+          VISIT_DATA='${{ inputs.visit }}'
+
+          # Если файл visitors.json не существует, создаем его с пустым массивом
+          if [ ! -f visitors.json ]; then
+            echo "[]" > visitors.json
+          fi
+
+          # Добавляем новую запись в JSON-файл
+          cat visitors.json | jq --argjson visit "$VISIT_DATA" '. + [$visit]' > temp.json && mv temp.json visitors.json
 
       - name: Commit and Push
         run: |
