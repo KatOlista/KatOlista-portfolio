@@ -49,5 +49,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      async function logVisit() {
+        const response = await fetch("https://api64.ipify.org?format=json");
+        const { ip } = await response.json();
+
+        const visitData = {
+          ip: ip,
+          userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString()
+        };
+
+        await fetch(
+          "https://github.com/KatOlista/KatOlista-portfolio/actions/workflows/log-visit.yml/dispatches",
+          {
+            method: "POST",
+            headers: {
+              "Accept": "application/vnd.github.v3+json"
+            },
+            body: JSON.stringify({
+              ref: "main",
+              inputs: { visit: JSON.stringify(visitData) }
+            })
+          }
+        );
+      }
+
+      logVisit();
+    </script>
   </body>
 </html>
