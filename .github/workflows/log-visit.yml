@@ -1,48 +1,31 @@
-name: Log Visitor Data
+name: Log Visitor Data from Issues
 
 on:
+  schedule:
+    - cron: "*/15 * * * *"  # Запуск каждые 15 минут
   workflow_dispatch:
-    inputs:
-      visit:
-        description: "Visitor data"
-        required: true
 
 jobs:
-  log_visitor:
+  process_visitor_issues:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Загружаем всю историю коммитов, чтобы избежать проблем с pull
 
-      - name: Set up GitHub Actions permissions
+      - name: Fetch issues with visitor data
+        run: |
+          curl  -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                -H "Accept: application/vnd.github.v3+json" \
+                https://api.github.com/repos/KatOlista/KatOlista-portfolio/issues?labels=visitor > issues.json
+
+      - name: Convert Issues to JSON Log
+        run: |
+          cat issues.json | jq '[.[] | {ip: .title, userAgent: .body, timestamp: .created_at}]' > visitors.json
+
+      - name: Commit and Push Visitor Data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Authenticate with GitHub Token
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-
-      - name: Pull latest changes to avoid conflicts
-        run: |
-          git pull --rebase origin main || (git fetch --all && git reset --hard origin/main)
-
-
-      - name: Save visitor data
-        run: |
-          VISIT_DATA='${{ inputs.visit }}'
-
-          # Если файл visitors.json не существует, создаем его с пустым массивом
-          if [ ! -f visitors.json ]; then
-            echo "[]" > visitors.json
-          fi
-
-          # Добавляем новую запись в JSON-файл
-          cat visitors.json | jq --argjson visit "$VISIT_DATA" '. + [$visit]' > temp.json && mv temp.json visitors.json
-
-      - name: Commit and Push
-        run: |
           git add visitors.json
-          git diff --staged --quiet || (git commit -m "New visitor log" && git push origin main)
+          git commit -m "Update visitor log from Issues" || echo "No changes to commit"
+          git push
