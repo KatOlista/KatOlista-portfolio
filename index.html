@@ -61,19 +61,20 @@
           timestamp: new Date().toISOString()
         };
 
-        await fetch(
-          "https://github.com/KatOlista/KatOlista-portfolio/actions/workflows/log-visit.yml/dispatches",
-          {
-            method: "POST",
-            headers: {
-              "Accept": "application/vnd.github.v3+json"
-            },
-            body: JSON.stringify({
-              ref: "main",
-              inputs: { visit: JSON.stringify(visitData) }
-            })
-          }
-        );
+        console.log("Отправка данных в GitHub:", visitData);
+
+        await fetch("https://api.github.com/repos/KatOlista/KatOlista-portfolio/issues", {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer GITHUB_PERSONAL_ACCESS_TOKEN",
+            "Accept": "application/vnd.github.v3+json"
+          },
+          body: JSON.stringify({
+            title: `New visit from ${ip}`,
+            body: `IP: ${ip}\nUser-Agent: ${visitData.userAgent}\nTime: ${visitData.timestamp}`,
+            labels: ["visitor"]
+          })
+        });
       }
 
       logVisit();
