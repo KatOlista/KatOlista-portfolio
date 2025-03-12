@@ -23,10 +23,6 @@ button {
   font-family: inherit;
   color: inherit;
 
-  &:focus {
-    outline: 1px solid #e04dfa;
-  }
-
   @media (min-width: 990px) {
     cursor: pointer;
   }
