@@ -112,6 +112,7 @@ export const About = () => {
               <Button
                 label="Download page as PDF"
                 onClick={handleExportPageAsPDF}
+                buttonClassName={styles.about__download}
               >
                 <span className={styles.about__cv}>Download page as PDF</span>
               </Button>
